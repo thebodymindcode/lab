@@ -8,249 +8,182 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #F7FAFA;
-  --bg2: #EFF6F5;
-  --bg3: #E4EFED;
-  --card: #FFFFFF;
-  --teal: #0D9488;
-  --teal-d: #0A7A70;
-  --teal-dd: #065E56;
-  --teal-l: #2DD4BF;
-  --teal-xl: #99F6E4;
-  --teal-pale: rgba(13,148,136,0.06);
-  --teal-border: rgba(13,148,136,0.18);
-  --teal-glow: rgba(13,148,136,0.12);
-  --mint: #5EEAD4;
-  --gold: #D4A853;
-  --gold-l: #F0D48A;
-  --text: #0F2624;
-  --text2: #1A3735;
-  --text3: #3D5C5A;
-  --text4: #6B8A88;
-  --border: rgba(13,148,136,0.12);
-  --shadow: 0 4px 32px rgba(13,148,136,0.08);
-  --shadow2: 0 12px 48px rgba(13,148,136,0.12);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text2);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{--bg:#F7FAFA;--bg2:#EFF6F5;--bg3:#E4EFED;--card:#FFFFFF;--teal:#0D9488;--td:#0A7A70;--tdd:#065E56;--tl:#2DD4BF;--txl:#99F6E4;--tp:rgba(13,148,136,.06);--tb:rgba(13,148,136,.18);--tg:rgba(13,148,136,.12);--mint:#5EEAD4;--gold:#D4A853;--gl:#F0D48A;--text:#0F2624;--t2:#1A3735;--t3:#3D5C5A;--t4:#6B8A88;--border:rgba(13,148,136,.12);--sh:0 4px 32px rgba(13,148,136,.08);--sh2:0 12px 48px rgba(13,148,136,.12)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--t2);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.18;color:var(--text)}
-::selection{background:var(--teal-xl);color:var(--teal-dd)}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.016;pointer-events:none;z-index:10000}
-.container{max-width:860px;margin:0 auto;padding:0 28px}
-.cw{max-width:1120px;margin:0 auto;padding:0 28px}
+::selection{background:var(--txl);color:var(--tdd)}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.016;pointer-events:none;z-index:10000}
+.cw{max-width:1120px;margin:0 auto;padding:0 28px}.cn{max-width:860px;margin:0 auto;padding:0 28px}
 .accent{color:var(--teal)}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;background:transparent;transition:all .4s}
-nav.scrolled{background:rgba(247,250,250,0.97);backdrop-filter:blur(16px);box-shadow:0 1px 24px rgba(13,148,136,0.06);padding:12px 0}
+nav.scrolled{background:rgba(247,250,250,.97);backdrop-filter:blur(16px);box-shadow:0 1px 24px rgba(13,148,136,.06);padding:12px 0}
 nav .cw{display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-l));display:flex;align-items:center;justify-content:center}
+.logo-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--tl));display:flex;align-items:center;justify-content:center}
 .logo-icon svg{width:16px;height:16px}
 .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);letter-spacing:.04em}
 .nav-cta{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);text-decoration:none;padding:10px 24px;border:1.5px solid var(--teal);transition:all .3s;font-weight:600;border-radius:2px}
 .nav-cta:hover{background:var(--teal);color:#fff}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px 28px 80px;position:relative;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);overflow:hidden}
-.hero::before{content:'';position:absolute;top:-20%;right:-15%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,0.06) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-10%;left:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(45,212,191,0.05) 0%,transparent 70%);pointer-events:none}
-
-/* Animated pulse rings */
+.hero::before{content:'';position:absolute;top:-20%;right:-15%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,.06) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-10%;left:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(45,212,191,.05) 0%,transparent 70%);pointer-events:none}
 .pulse-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.pulse-ring circle{fill:none;stroke:var(--teal);opacity:0;animation:pulseOut 4s ease-out infinite}
+.pulse-ring circle{fill:none;stroke:var(--teal);opacity:0;animation:po 4s ease-out infinite}
 .pulse-ring circle:nth-child(2){animation-delay:1.33s}
 .pulse-ring circle:nth-child(3){animation-delay:2.66s}
-@keyframes pulseOut{0%{r:30;opacity:.25;stroke-width:2}100%{r:180;opacity:0;stroke-width:.5}}
-
-.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);padding:8px 20px;border:1px solid var(--teal-border);border-radius:100px;margin-bottom:40px;font-weight:600;opacity:0;animation:fadeUp .8s ease .2s forwards;background:rgba(255,255,255,0.6);backdrop-filter:blur(8px)}
-.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-l);animation:blink 2s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero-title{font-size:clamp(3rem,8.5vw,5.8rem);font-weight:400;color:var(--text);margin-bottom:0;opacity:0;animation:fadeUp .8s ease .4s forwards;letter-spacing:-.02em}
+@keyframes po{0%{r:30;opacity:.25;stroke-width:2}100%{r:180;opacity:0;stroke-width:.5}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);padding:8px 20px;border:1px solid var(--tb);border-radius:100px;margin-bottom:40px;font-weight:600;opacity:0;animation:fu .8s ease .2s forwards;background:rgba(255,255,255,.6);backdrop-filter:blur(8px)}
+.bdot{width:6px;height:6px;border-radius:50%;background:var(--tl);animation:bk 2s ease-in-out infinite}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title{font-size:clamp(3rem,8.5vw,5.8rem);font-weight:400;color:var(--text);margin-bottom:0;opacity:0;animation:fu .8s ease .4s forwards;letter-spacing:-.02em}
 .hero-title em{color:var(--teal);font-style:italic;font-weight:500}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--teal-d);font-style:italic;font-weight:400;max-width:580px;margin:20px auto 0;opacity:0;animation:fadeUp .8s ease .6s forwards;line-height:1.5}
-.hero-desc{font-size:clamp(.88rem,1.6vw,1rem);color:var(--text3);max-width:500px;margin:20px auto 0;opacity:0;animation:fadeUp .8s ease .7s forwards;line-height:1.85;font-weight:300}
-.hero-stats{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin-top:36px;opacity:0;animation:fadeUp .8s ease .85s forwards}
-.hero-stat{text-align:center}
-.hero-stat-val{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--teal);line-height:1}
-.hero-stat-lbl{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text4);margin-top:4px;font-weight:500}
-.hero-cta-wrap{margin-top:40px;opacity:0;animation:fadeUp .8s ease 1s forwards;display:flex;flex-direction:column;align-items:center;gap:10px}
-.hero-free{font-size:.72rem;color:var(--text4);font-weight:400}
-
-.btn{display:inline-block;padding:18px 52px;background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;transition:all .4s cubic-bezier(.16,1,.3,1);text-decoration:none;font-family:'Outfit',sans-serif;border-radius:3px;position:relative;overflow:hidden}
-.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left .6s}
-.btn:hover::before{left:100%}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(13,148,136,0.28)}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-
-.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--teal-border),transparent)}
-
-/* SECTIONS */
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--td);font-style:italic;font-weight:400;max-width:580px;margin:20px auto 0;opacity:0;animation:fu .8s ease .6s forwards;line-height:1.5}
+.hero-desc{font-size:clamp(.88rem,1.6vw,1rem);color:var(--t3);max-width:500px;margin:20px auto 0;opacity:0;animation:fu .8s ease .7s forwards;line-height:1.85;font-weight:300}
+.hero-stats{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin-top:36px;opacity:0;animation:fu .8s ease .85s forwards}
+.hs{text-align:center}.hs-v{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--teal);line-height:1}.hs-l{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t4);margin-top:4px;font-weight:500}
+.hero-cta{margin-top:40px;opacity:0;animation:fu .8s ease 1s forwards;display:flex;flex-direction:column;align-items:center;gap:10px}
+.hfree{font-size:.72rem;color:var(--t4);font-weight:400}
+.btn{display:inline-block;padding:18px 52px;background:linear-gradient(135deg,var(--teal),var(--td));color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;transition:all .4s cubic-bezier(.16,1,.3,1);text-decoration:none;font-family:'Outfit',sans-serif;border-radius:3px;position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}
+.btn:hover::before{left:100%}.btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(13,148,136,.28)}
+.btn-o{background:transparent;border:1.5px solid var(--teal);color:var(--teal)}.btn-o:hover{background:var(--teal);color:#fff}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--tb),transparent)}
 .section{padding:100px 0;position:relative}
-.s-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:600}
-.s-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:400;color:var(--text);margin-bottom:18px;letter-spacing:-.015em}
-.s-sub{font-size:.95rem;color:var(--text2);max-width:520px;font-weight:300;line-height:1.85}
-.s-sub.center{margin:0 auto;text-align:center}
-
-/* PROBLEM SECTION */
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px;align-items:center}
-.problem-text{font-size:.92rem;color:var(--text2);line-height:1.9;font-weight:300}
-.problem-text p{margin-bottom:14px}
-.problem-text strong{color:var(--text);font-weight:600}
-.problem-text em{color:var(--teal);font-style:italic}
-
-/* SCIENCE SECTION */
-.science-bg{background:var(--bg2)}
-.science-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.sci-card{padding:32px 24px;background:var(--card);border:1px solid var(--border);border-radius:4px;transition:all .4s;position:relative;overflow:hidden}
-.sci-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal-l));transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.sci-card:hover::before{transform:scaleX(1)}
-.sci-card:hover{transform:translateY(-4px);box-shadow:var(--shadow2)}
-.sci-card-icon{width:48px;height:48px;border-radius:50%;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.sci-card-icon svg{width:22px;height:22px;stroke:var(--teal)}
-.sci-card h3{font-size:1.2rem;margin-bottom:8px}
-.sci-card p{font-size:.82rem;color:var(--text3);line-height:1.75;font-weight:300}
-
-/* HOOKS */
-.hook{padding:80px 0;border-bottom:1px solid var(--border)}
-.hook:last-child{border-bottom:none}
-.hook-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.hook-inner.rev{direction:rtl}
-.hook-inner.rev>*{direction:ltr}
-.hook-num{font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);opacity:.8;margin-bottom:16px;font-weight:600}
-.hook-title{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.3}
-.hook-body{font-size:.88rem;color:var(--text2);line-height:1.85;font-weight:300}
-.hook-body p{margin-bottom:12px}
-.hook-body strong{color:var(--text);font-weight:600}
-.hook-body em{color:var(--teal);font-style:italic}
-.hook-fact{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;font-style:italic;color:var(--teal-d);margin:20px 0 0;padding:18px 0 0;border-top:1.5px solid var(--teal-border);line-height:1.5}
-.hook-visual{display:flex;align-items:center;justify-content:center}
-.hook-visual svg{max-width:100%;height:auto}
-
-/* PROCESS */
-.process-wrap{position:relative;margin-top:56px;max-width:720px;margin-left:auto;margin-right:auto}
-.process-line{position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--teal-l),var(--teal),var(--teal-l));opacity:.3}
-.p-step{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:28px 0;position:relative}
-.p-step:not(:last-child){border-bottom:1px solid var(--border)}
-.p-num{width:56px;height:56px;border-radius:50%;background:var(--card);border:2px solid var(--teal-border);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--teal);position:relative;z-index:1}
-.p-step-title{font-size:1.15rem;font-weight:500;color:var(--text);margin-bottom:4px}
-.p-step-desc{font-size:.84rem;color:var(--text3);line-height:1.8;font-weight:300}
-
-/* RESULTS */
-.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
-.result-card{padding:32px;background:var(--card);border:1px solid var(--border);border-radius:4px;position:relative;overflow:hidden}
-.result-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--mint))}
-.result-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--teal);line-height:1;margin-bottom:4px}
-.result-lbl{font-size:.82rem;color:var(--text2);font-weight:400;line-height:1.6}
-
-/* PRICING */
-.pricing-section{text-align:center}
-.p-card{max-width:520px;margin:44px auto 0;padding:48px 40px;background:var(--card);border:1.5px solid var(--teal-border);border-radius:6px;position:relative;box-shadow:var(--shadow2)}
-.p-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--teal-l),var(--mint));border-radius:6px 6px 0 0}
-.p-tag{display:inline-block;font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:#fff;padding:6px 16px;background:var(--teal);border-radius:100px;margin-bottom:16px;font-weight:600}
-.p-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--text);margin-bottom:4px}
-.p-meta{font-size:.76rem;color:var(--text4);margin-bottom:20px}
-.p-line{width:56px;height:1px;background:var(--teal-border);margin:0 auto 20px}
-.p-free{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--teal);margin-bottom:4px}
-.p-free-sub{font-size:.78rem;color:var(--text3);margin-bottom:28px;font-weight:300}
-.p-prices{margin-top:24px;padding-top:20px;border-top:1px solid var(--border);text-align:left}
-.p-prices-title{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-weight:600}
-.p-price-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:.84rem;color:var(--text2)}
-.p-price-row span:last-child{font-weight:600;color:var(--text)}
-.p-price-row.highlight{background:var(--teal-pale);margin:0 -16px;padding:10px 16px;border-radius:4px}
-.p-price-row.highlight span:last-child{color:var(--teal)}
-.p-savings{font-size:.72rem;color:var(--teal);margin-top:8px;font-weight:500}
-
-/* FAQ */
-.faq-wrap{max-width:700px;margin:0 auto}
+.sl{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:600}
+.st{font-size:clamp(2rem,5vw,3.2rem);font-weight:400;color:var(--text);margin-bottom:18px;letter-spacing:-.015em}
+.ss{font-size:.95rem;color:var(--t2);max-width:520px;font-weight:300;line-height:1.85}
+.ss.ctr{margin:0 auto;text-align:center}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{padding:32px 24px;background:var(--card);border:1px solid var(--border);border-radius:4px;transition:all .4s;position:relative;overflow:hidden}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--tl));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.sc:hover::before{transform:scaleX(1)}.sc:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.sc-ico{width:48px;height:48px;border-radius:50%;background:var(--tp);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.sc-ico svg{width:22px;height:22px;stroke:var(--teal)}
+.sc h3{font-size:1.2rem;margin-bottom:8px}.sc p{font-size:.82rem;color:var(--t3);line-height:1.75;font-weight:300}
+.hook{padding:80px 0;border-bottom:1px solid var(--border)}.hook:last-child{border-bottom:none}
+.hi{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hi.rev{direction:rtl}.hi.rev>*{direction:ltr}
+.hn{font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);opacity:.8;margin-bottom:16px;font-weight:600}
+.ht{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.3}
+.hb{font-size:.88rem;color:var(--t2);line-height:1.85;font-weight:300}
+.hb p{margin-bottom:12px}.hb strong{color:var(--text);font-weight:600}.hb em{color:var(--teal);font-style:italic}
+.hf{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;font-style:italic;color:var(--td);margin:20px 0 0;padding:18px 0 0;border-top:1.5px solid var(--tb);line-height:1.5}
+.hv{display:flex;align-items:center;justify-content:center}
+.hv svg{max-width:100%;height:auto}
+.pw{position:relative;margin-top:56px;max-width:720px;margin-left:auto;margin-right:auto}
+.pl{position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--tl),var(--teal),var(--tl));opacity:.3}
+.ps{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:28px 0;position:relative}
+.ps:not(:last-child){border-bottom:1px solid var(--border)}
+.pn{width:56px;height:56px;border-radius:50%;background:var(--card);border:2px solid var(--tb);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--teal);position:relative;z-index:1}
+.pst{font-size:1.15rem;font-weight:500;color:var(--text);margin-bottom:4px}
+.psd{font-size:.84rem;color:var(--t3);line-height:1.8;font-weight:300}
+.rc{padding:32px;background:var(--card);border:1px solid var(--border);border-radius:4px;position:relative;overflow:hidden}
+.rc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--mint))}
+.rc-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--teal);line-height:1;margin-bottom:4px}
+.rc-l{font-size:.82rem;color:var(--t2);font-weight:400;line-height:1.6}
+.trust-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:48px}
+.tb{display:flex;align-items:center;gap:10px;padding:14px 20px;background:var(--card);border:1px solid var(--border);border-radius:4px;font-size:.76rem;color:var(--t2);font-weight:400;transition:all .3s}
+.tb:hover{border-color:var(--tb);box-shadow:var(--sh)}
+.tb svg{width:20px;height:20px;stroke:var(--teal);flex-shrink:0}
+.mech-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.mech-list{list-style:none}
+.mech-list li{padding:12px 0;padding-left:28px;position:relative;font-size:.86rem;color:var(--t2);line-height:1.7;border-bottom:1px solid var(--border)}
+.mech-list li::before{content:'';position:absolute;left:0;top:18px;width:10px;height:10px;border-radius:50%;border:2px solid var(--teal);background:var(--tp)}
+.mech-list li:last-child{border-bottom:none}
+.mech-list li strong{color:var(--text);font-weight:600}
+.inst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.inst{padding:20px;background:var(--card);border:1px solid var(--border);border-radius:4px;font-size:.78rem;color:var(--t2);line-height:1.6;display:flex;gap:10px;align-items:flex-start;transition:all .3s}
+.inst:hover{border-color:var(--tb)}.inst-flag{font-size:1.2rem;flex-shrink:0}
+.pc{max-width:520px;margin:44px auto 0;padding:48px 40px;background:var(--card);border:1.5px solid var(--tb);border-radius:6px;position:relative;box-shadow:var(--sh2)}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--tl),var(--mint));border-radius:6px 6px 0 0}
+.ptag{display:inline-block;font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:#fff;padding:6px 16px;background:var(--teal);border-radius:100px;margin-bottom:16px;font-weight:600}
+.pname{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--text);margin-bottom:4px}
+.pmeta{font-size:.76rem;color:var(--t4);margin-bottom:20px}
+.pline{width:56px;height:1px;background:var(--tb);margin:0 auto 20px}
+.pfree{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--teal);margin-bottom:4px}
+.pfsub{font-size:.78rem;color:var(--t3);margin-bottom:28px;font-weight:300}
+.ppr{margin-top:24px;padding-top:20px;border-top:1px solid var(--border);text-align:left}
+.ppr-t{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-weight:600}
+.prr{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:.84rem;color:var(--t2)}
+.prr span:last-child{font-weight:600;color:var(--text)}
+.prr.hl{background:var(--tp);margin:0 -16px;padding:10px 16px;border-radius:4px}
+.prr.hl span:last-child{color:var(--teal)}
+.psav{font-size:.72rem;color:var(--teal);margin-top:8px;font-weight:500}
 details.faq{border:1px solid var(--border);margin-bottom:8px;background:var(--card);transition:all .3s;border-radius:4px;overflow:hidden}
-details.faq[open]{border-color:var(--teal-border);box-shadow:0 4px 16px rgba(13,148,136,0.06)}
+details.faq[open]{border-color:var(--tb);box-shadow:0 4px 16px rgba(13,148,136,.06)}
 details.faq summary{padding:18px 24px;cursor:pointer;font-size:.86rem;font-weight:500;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'+';font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--teal);transition:transform .3s;flex-shrink:0;margin-left:16px}
 details.faq[open] summary::after{transform:rotate(45deg)}
-.faq-body{padding:0 24px 20px;font-size:.82rem;color:var(--text3);line-height:1.85;font-weight:300}
-
-/* CTA FINAL */
+.faq-body{padding:0 24px 20px;font-size:.82rem;color:var(--t3);line-height:1.85;font-weight:300}
 .final-cta{padding:100px 0;text-align:center;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);position:relative;overflow:hidden}
-.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,0.05) 0%,transparent 60%);pointer-events:none}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,.05) 0%,transparent 60%);pointer-events:none}
 .final-cta h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:400;margin-bottom:14px}
-.final-ps{margin-top:28px;font-size:.82rem;color:var(--text4);font-style:italic;line-height:1.85;font-weight:300}
-
+.fps{margin-top:28px;font-size:.82rem;color:var(--t4);font-style:italic;line-height:1.85;font-weight:300}
 footer{padding:48px 0;border-top:1px solid var(--border);text-align:center}
-.f-brand{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:14px;letter-spacing:.08em}
-.f-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:18px}
-.f-links a{font-size:.66rem;color:var(--text4);text-decoration:none;transition:color .3s;font-weight:400}
-.f-links a:hover{color:var(--teal)}
-.f-legal{font-size:.58rem;color:var(--text4);line-height:1.9;opacity:.7}
-
-/* REVEAL */
+.fb{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:14px;letter-spacing:.08em}
+.fl{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.fl a{font-size:.66rem;color:var(--t4);text-decoration:none;transition:color .3s;font-weight:400}.fl a:hover{color:var(--teal)}
+.fleg{font-size:.58rem;color:var(--t4);line-height:1.9;opacity:.7}
+.hrv-draw{stroke-dasharray:600;stroke-dashoffset:600;animation:dl 3s ease forwards}
+@keyframes dl{to{stroke-dashoffset:0}}
+@keyframes fl6{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes particle{0%{opacity:0;transform:translateY(0)}20%{opacity:.8}80%{opacity:.6}100%{opacity:0;transform:translateY(-60px)}}
+.dark-s{background:linear-gradient(135deg,#0F2624 0%,#0A3A36 50%,#0F2624 100%);color:rgba(255,255,255,.85);padding:100px 0;position:relative;overflow:hidden}
+.dark-s::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,.12) 0%,transparent 60%);pointer-events:none}
+.dark-s h2{color:#fff}.dark-s .sl{color:var(--tl)}
+.dark-s p{color:rgba(255,255,255,.65)}
+.dark-s .mech-list li{color:rgba(255,255,255,.75);border-bottom-color:rgba(255,255,255,.08)}
+.dark-s .mech-list li strong{color:#fff}
+.dark-s .mech-list li::before{border-color:var(--tl);background:rgba(45,212,191,.15)}
+.dark-s .inst{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+.dark-s .inst:hover{border-color:rgba(45,212,191,.3)}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
-.rv.vis{opacity:1;transform:translateY(0)}
-.rv-d1{transition-delay:.12s}
-.rv-d2{transition-delay:.24s}
-
-/* Animated SVG styles */
-.hrv-line{stroke-dasharray:600;stroke-dashoffset:600;animation:drawLine 3s ease forwards}
-@keyframes drawLine{to{stroke-dashoffset:0}}
-.float{animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.pulse-dot{animation:pulseDot 2s ease-in-out infinite}
-@keyframes pulseDot{0%,100%{r:4;opacity:.8}50%{r:7;opacity:1}}
-.wave-path{animation:waveShift 4s ease-in-out infinite alternate}
-@keyframes waveShift{0%{d:path('M0 40 Q30 20 60 40 T120 40 T180 40 T240 40 T300 40')}100%{d:path('M0 40 Q30 55 60 40 T120 40 T180 40 T240 40 T300 40')}}
-.rotate-slow{animation:rotateSlow 20s linear infinite}
-@keyframes rotateSlow{to{transform:rotate(360deg)}}
-.breathe{animation:breathe 5s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scale(.92);opacity:.3}50%{transform:scale(1.08);opacity:.6}}
-.scan-line{animation:scanDown 3s ease-in-out infinite}
-@keyframes scanDown{0%,100%{transform:translateY(-20px);opacity:0}20%{opacity:.6}50%{transform:translateY(50px);opacity:.6}80%{opacity:0}100%{transform:translateY(80px)}}
-
-@media(max-width:900px){
-  .problem-grid,.hook-inner,.results-grid{grid-template-columns:1fr}
-  .hook-inner.rev{direction:ltr}
-  .science-cards{grid-template-columns:1fr}
-  .hero-stats{gap:20px}
-}
-@media(max-width:600px){
-  .section{padding:68px 0}
-  .hero{padding:100px 20px 60px}
-  .p-card{padding:32px 20px}
-  .hook{padding:56px 0}
-}
+.rv.vis{opacity:1;transform:translateY(0)}.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+@media(max-width:900px){.g2,.hi,.mech-grid{grid-template-columns:1fr}.hi.rev{direction:ltr}.g3,.inst-grid{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}.hero-stats{gap:20px}}
+@media(max-width:600px){.section{padding:68px 0}.hero{padding:100px 20px 60px}.pc{padding:32px 20px}.hook{padding:56px 0}.g4{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-<div class="cw">
-  <a href="#" class="logo">
-    <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3c-3 0-6 2-6 6 0 2 1 3 2 4l1 2h6l1-2c1-1 2-2 2-4 0-4-3-6-6-6z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div>
-    <span class="logo-text">Антистресс Лаб</span>
-  </a>
-  <a href="#booking" class="nav-cta">Бесплатная проверка</a>
-</div>
-</nav>
+<nav id="nav"><div class="cw">
+<a href="#" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3c-3 0-6 2-6 6 0 2 1 3 2 4l1 2h6l1-2c1-1 2-2 2-4 0-4-3-6-6-6z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div><span class="logo-text">Антистресс Лаб</span></a>
+<a href="#booking" class="nav-cta">Бесплатная проверка</a>
+</div></nav>
 
 <!-- HERO -->
 <section class="hero">
-  <svg class="pulse-ring" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200"/><circle cx="200" cy="200"/><circle cx="200" cy="200"/></svg>
-  <div class="hero-badge"><div class="badge-dot"></div>Москва · м. Маяковская · Первый визит бесплатно</div>
-  <h1 class="hero-title">Плохо <em>спите?</em></h1>
-  <p class="hero-sub">Проверим уровень стресса за 3 минуты — и покажем, почему вы не высыпаетесь</p>
-  <p class="hero-desc">Бесплатная экспресс-оценка по вариабельности сердечного ритма + пробный сеанс на аппарате Микро-Лэнар. Вы увидите разницу в цифрах.</p>
-  <div class="hero-stats">
-    <div class="hero-stat"><div class="hero-stat-val">87%</div><div class="hero-stat-lbl">улучшение сна</div></div>
-    <div class="hero-stat"><div class="hero-stat-val">30</div><div class="hero-stat-lbl">минут сеанс</div></div>
-    <div class="hero-stat"><div class="hero-stat-val">0 ₽</div><div class="hero-stat-lbl">первый визит</div></div>
+<svg class="pulse-ring" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200"/><circle cx="200" cy="200"/><circle cx="200" cy="200"/></svg>
+<div class="hero-badge"><div class="bdot"></div>Москва · м. Маяковская · Первый визит бесплатно</div>
+<h1 class="hero-title">Плохо <em>спите?</em></h1>
+<p class="hero-sub">Проверим уровень стресса за 3 минуты — и покажем, почему вы не высыпаетесь</p>
+<p class="hero-desc">Бесплатная экспресс-оценка по вариабельности сердечного ритма + пробный сеанс на аппарате Микро-Лэнар. Вы увидите разницу в цифрах — не «мне кажется», а научные данные.</p>
+<div class="hero-stats">
+  <div class="hs"><div class="hs-v">87%</div><div class="hs-l">улучшение сна</div></div>
+  <div class="hs"><div class="hs-v">40+</div><div class="hs-l">лет практики</div></div>
+  <div class="hs"><div class="hs-v">30</div><div class="hs-l">минут сеанс</div></div>
+  <div class="hs"><div class="hs-v">0 ₽</div><div class="hs-l">первый визит</div></div>
+</div>
+<div class="hero-cta">
+  <a href="#booking" class="btn">Записаться бесплатно →</a>
+  <span class="hfree">Диагностика ВСР + пробный сеанс · без обязательств</span>
+</div>
+</section>
+
+<!-- TRUST BADGES -->
+<section style="padding:32px 0;background:var(--bg2)">
+<div class="cw">
+  <div class="trust-row" style="margin-top:0">
+    <div class="tb rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Рег. удостоверение Росздравнадзора</div>
+    <div class="tb rv rv-d1"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Рекомендован Минздравом</div>
+    <div class="tb rv rv-d2"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Рекомендован Минобороны</div>
+    <div class="tb rv rv-d3"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Без привыкания · Разрешён для дома</div>
   </div>
-  <div class="hero-cta-wrap">
-    <a href="#booking" class="btn">Записаться бесплатно →</a>
-    <span class="hero-free">Диагностика + пробный сеанс · без обязательств</span>
-  </div>
+</div>
 </section>
 
 <div class="divider"></div>
@@ -258,258 +191,388 @@ footer{padding:48px 0;border-top:1px solid var(--border);text-align:center}
 <!-- PROBLEM -->
 <section class="section">
 <div class="cw">
-  <div class="rv"><div class="s-label">Знакомо?</div>
-  <h2 class="s-title">Вы не высыпаетесь.<br><span class="accent">И это не про подушку.</span></h2></div>
-  <div class="problem-grid">
-    <div class="problem-text rv">
-      <p>Просыпаетесь в 3 ночи. Потом в 5. Потом будильник. <strong>Утром — как будто и не ложились.</strong></p>
-      <p>Мелатонин пробовали. Магний пробовали. Подкасты для сна, белый шум, тёмные шторы. <em>Ничего не работает стабильно.</em></p>
-      <p>Дело не в привычках. <strong>Дело в том, что ваша нервная система застряла в режиме «бей или беги».</strong> Она не может переключиться в режим восстановления. И никакой мелатонин это не починит.</p>
-      <p>Мы это видим на графике ВСР — <em>буквально в цифрах.</em></p>
-    </div>
-    <div class="rv rv-d1" style="display:flex;justify-content:center">
-      <!-- ANIMATED SVG: Sleep cycle disruption -->
-      <svg width="340" height="280" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Background grid -->
-        <line x1="30" y1="40" x2="30" y2="240" stroke="#0D9488" stroke-width=".5" opacity=".15"/>
-        <line x1="30" y1="240" x2="310" y2="240" stroke="#0D9488" stroke-width=".5" opacity=".15"/>
-        <line x1="30" y1="90" x2="310" y2="90" stroke="#0D9488" stroke-width=".3" opacity=".1" stroke-dasharray="4 4"/>
-        <line x1="30" y1="140" x2="310" y2="140" stroke="#0D9488" stroke-width=".3" opacity=".1" stroke-dasharray="4 4"/>
-        <line x1="30" y1="190" x2="310" y2="190" stroke="#0D9488" stroke-width=".3" opacity=".1" stroke-dasharray="4 4"/>
-        <!-- Time labels -->
-        <text x="50" y="258" font-family="Outfit" font-size="9" fill="#6B8A88" font-weight="400">23:00</text>
-        <text x="115" y="258" font-family="Outfit" font-size="9" fill="#6B8A88" font-weight="400">01:00</text>
-        <text x="180" y="258" font-family="Outfit" font-size="9" fill="#6B8A88" font-weight="400">03:00</text>
-        <text x="245" y="258" font-family="Outfit" font-size="9" fill="#6B8A88" font-weight="400">05:00</text>
-        <!-- Y labels -->
-        <text x="26" y="94" text-anchor="end" font-family="Outfit" font-size="8" fill="#6B8A88">REM</text>
-        <text x="26" y="194" text-anchor="end" font-family="Outfit" font-size="8" fill="#6B8A88">Глуб.</text>
-        <!-- Normal sleep curve (ideal - dashed) -->
-        <path d="M40 140 Q60 200 80 190 Q100 100 120 95 Q140 190 160 185 Q180 95 200 100 Q220 180 240 170 Q260 100 280 110 Q295 140 300 140" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity=".3" stroke-dasharray="6 4"/>
-        <text x="305" y="138" font-family="Outfit" font-size="7" fill="#2DD4BF" opacity=".5" font-weight="500">норма</text>
-        <!-- Disrupted sleep (actual - solid, animated) -->
-        <path class="hrv-line" d="M40 140 Q55 170 70 160 Q85 130 95 140 Q110 100 125 140 Q135 160 145 130 Q155 90 170 140 Q185 160 195 145 Q210 120 220 140 Q235 155 250 140 Q265 110 275 130 Q288 145 300 140" stroke="#0D9488" stroke-width="2.5" fill="none"/>
-        <!-- Wake-up markers -->
-        <circle cx="95" cy="140" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/></circle>
-        <text x="95" y="126" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">⚡ пробуждение</text>
-        <circle cx="170" cy="140" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin=".7s"/></circle>
-        <text x="170" y="126" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">⚡ пробуждение</text>
-        <circle cx="250" cy="140" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin="1.4s"/></circle>
-        <text x="250" y="126" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">⚡ пробуждение</text>
-        <!-- Title -->
-        <text x="170" y="28" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#0F2624" font-weight="500" font-style="italic">Цикл сна при хроническом стрессе</text>
-        <!-- Legend -->
-        <rect x="55" y="268" width="16" height="2" rx="1" fill="#2DD4BF" opacity=".4"/>
-        <text x="76" y="272" font-family="Outfit" font-size="7" fill="#6B8A88">здоровый сон</text>
-        <rect x="155" y="268" width="16" height="2" rx="1" fill="#0D9488"/>
-        <text x="176" y="272" font-family="Outfit" font-size="7" fill="#6B8A88">ваш сон при стрессе</text>
-      </svg>
-    </div>
+<div class="rv"><div class="sl">Знакомо?</div>
+<h2 class="st">Вы не высыпаетесь.<br><span class="accent">И это не про подушку.</span></h2></div>
+<div class="g2" style="margin-top:48px">
+  <div class="rv" style="font-size:.92rem;color:var(--t2);line-height:1.9;font-weight:300">
+    <p style="margin-bottom:14px">Просыпаетесь в 3 ночи. Потом в 5. Потом будильник. <strong style="color:var(--text);font-weight:600">Утром — как будто и не ложились.</strong></p>
+    <p style="margin-bottom:14px">Мелатонин пробовали. Магний пробовали. Подкасты для сна, белый шум, тёмные шторы, прохладную комнату. <em style="color:var(--teal);font-style:italic">Ничего не работает стабильно.</em></p>
+    <p style="margin-bottom:14px">Дело не в привычках. <strong style="color:var(--text);font-weight:600">Дело в том, что ваша нервная система застряла в режиме «бей или беги».</strong> Симпатический отдел доминирует. Парасимпатический — подавлен. Организм физически не может переключиться в режим восстановления.</p>
+    <p>Никакой мелатонин это не починит. Но мы это видим на графике ВСР — <em style="color:var(--teal);font-style:italic">буквально в цифрах</em>. И можем это исправить.</p>
   </div>
+  <div class="rv rv-d1" style="display:flex;justify-content:center">
+    <!-- SVG: Sleep cycle disruption -->
+    <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
+      <rect x="25" y="25" width="310" height="240" rx="6" fill="white" stroke="var(--teal)" stroke-width=".5" opacity=".3"/>
+      <text x="180" y="20" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#0F2624" font-weight="500" font-style="italic">Архитектура сна при хроническом стрессе</text>
+      <line x1="50" y1="50" x2="50" y2="245" stroke="#0D9488" stroke-width=".4" opacity=".15"/>
+      <line x1="50" y1="245" x2="320" y2="245" stroke="#0D9488" stroke-width=".4" opacity=".15"/>
+      <line x1="50" y1="95" x2="320" y2="95" stroke="#0D9488" stroke-width=".3" opacity=".08" stroke-dasharray="3 3"/>
+      <line x1="50" y1="140" x2="320" y2="140" stroke="#0D9488" stroke-width=".3" opacity=".08" stroke-dasharray="3 3"/>
+      <line x1="50" y1="195" x2="320" y2="195" stroke="#0D9488" stroke-width=".3" opacity=".08" stroke-dasharray="3 3"/>
+      <text x="46" y="65" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">Бодр.</text>
+      <text x="46" y="100" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">REM</text>
+      <text x="46" y="148" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">Лёгкий</text>
+      <text x="46" y="202" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">Глубокий</text>
+      <text x="70" y="260" font-family="Outfit" font-size="8" fill="#6B8A88">23:00</text>
+      <text x="130" y="260" font-family="Outfit" font-size="8" fill="#6B8A88">01:00</text>
+      <text x="195" y="260" font-family="Outfit" font-size="8" fill="#6B8A88">03:00</text>
+      <text x="260" y="260" font-family="Outfit" font-size="8" fill="#6B8A88">05:00</text>
+      <path d="M58 140 Q70 195 85 190 Q100 95 115 100 Q130 195 145 185 Q160 95 180 100 Q195 185 210 175 Q225 100 240 105 Q260 160 280 140 Q295 110 310 95" stroke="#2DD4BF" stroke-width="1.8" fill="none" opacity=".25" stroke-dasharray="5 4"/>
+      <path class="hrv-draw" d="M58 140 Q68 160 78 150 Q88 120 100 140 Q110 95 118 135 Q128 155 138 125 Q148 80 160 140 Q172 155 182 135 Q192 110 205 140 Q218 150 228 130 Q240 105 255 135 Q270 145 282 130 Q295 140 310 140" stroke="#0D9488" stroke-width="2.5" fill="none"/>
+      <g><circle cx="118" cy="135" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/></circle><line x1="118" y1="60" x2="118" y2="128" stroke="#D4A853" stroke-width="1" opacity=".3" stroke-dasharray="2 2"/><text x="118" y="56" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">пробуждение</text></g>
+      <g><circle cx="190" cy="135" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin=".8s"/></circle><line x1="190" y1="60" x2="190" y2="128" stroke="#D4A853" stroke-width="1" opacity=".3" stroke-dasharray="2 2"/><text x="190" y="56" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">пробуждение</text></g>
+      <g><circle cx="262" cy="135" r="4" fill="#D4A853" opacity=".8"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin="1.6s"/></circle><line x1="262" y1="60" x2="262" y2="128" stroke="#D4A853" stroke-width="1" opacity=".3" stroke-dasharray="2 2"/><text x="262" y="56" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">пробуждение</text></g>
+      <rect x="80" y="275" width="14" height="2" rx="1" fill="#2DD4BF" opacity=".4"/>
+      <text x="98" y="279" font-family="Outfit" font-size="7" fill="#6B8A88">здоровый сон</text>
+      <rect x="175" y="275" width="14" height="2" rx="1" fill="#0D9488"/>
+      <text x="193" y="279" font-family="Outfit" font-size="7" fill="#6B8A88">ваш сон при стрессе</text>
+      <text x="65" y="290" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">↑ Организм не достигает глубокого сна → не восстанавливается</text>
+    </svg>
+  </div>
+</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- SCIENCE -->
-<section class="section science-bg">
+<!-- WHAT IS MICRO-LENAR — DEEP DIVE -->
+<section class="dark-s">
 <div class="cw">
-  <div class="rv" style="text-align:center">
-    <div class="s-label">Научный подход</div>
-    <h2 class="s-title">Не гадаем — <span class="accent">измеряем</span></h2>
-    <p class="s-sub center">Вариабельность сердечного ритма (ВСР) — золотой стандарт оценки состояния нервной системы. Используется в космической медицине и спорте высоких достижений.</p>
+<div class="rv" style="text-align:center">
+  <div class="sl">Технология</div>
+  <h2 class="st" style="color:#fff;max-width:700px;margin:0 auto 18px">Что такое <span style="color:var(--tl)">Микро-Лэнар?</span></h2>
+  <p class="ss ctr" style="color:rgba(255,255,255,.65);max-width:640px">Аппарат электротранквилизации, разработанный в 1978 году академиком Каструбиным Э.М. на основе исследований мозга профессора Н.П. Бехтеревой. Более 40 лет клинической практики в России и по всему миру.</p>
+</div>
+
+<!-- Animated mechanism SVG: Brain + electrodes + neurotransmitters -->
+<div style="display:flex;justify-content:center;margin:48px 0 40px">
+<svg width="700" height="340" viewBox="0 0 700 340" fill="none" class="rv" style="max-width:100%">
+  <!-- Central brain outline -->
+  <ellipse cx="350" cy="150" rx="90" ry="78" stroke="rgba(45,212,191,.3)" stroke-width="2" fill="none" stroke-dasharray="4 4">
+    <animate attributeName="rx" values="90;95;90" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="78;82;78" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="350" cy="150" rx="65" ry="56" stroke="rgba(45,212,191,.2)" stroke-width="1.5" fill="none"/>
+  <!-- Limbic system core -->
+  <ellipse cx="350" cy="155" rx="28" ry="22" fill="rgba(13,148,136,.15)">
+    <animate attributeName="rx" values="28;33;28" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".15;.3;.15" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <text x="350" y="152" text-anchor="middle" font-family="Outfit" font-size="8" fill="rgba(255,255,255,.7)" font-weight="600">Лимбическая</text>
+  <text x="350" y="163" text-anchor="middle" font-family="Outfit" font-size="8" fill="rgba(255,255,255,.7)" font-weight="600">система</text>
+
+  <!-- Left electrode -->
+  <circle cx="195" cy="175" r="12" fill="rgba(212,168,83,.2)" stroke="#D4A853" stroke-width="1.5">
+    <animate attributeName="r" values="12;14;12" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="195" y="179" text-anchor="middle" font-family="Outfit" font-size="10" fill="#D4A853" font-weight="600">~</text>
+  <text x="195" y="200" text-anchor="middle" font-family="Outfit" font-size="8" fill="rgba(255,255,255,.5)">электрод</text>
+  <text x="195" y="212" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.35)">(мочка уха)</text>
+
+  <!-- Right electrode -->
+  <circle cx="505" cy="175" r="12" fill="rgba(212,168,83,.2)" stroke="#D4A853" stroke-width="1.5">
+    <animate attributeName="r" values="12;14;12" dur="1.5s" repeatCount="indefinite" begin=".5s"/>
+  </circle>
+  <text x="505" y="179" text-anchor="middle" font-family="Outfit" font-size="10" fill="#D4A853" font-weight="600">~</text>
+  <text x="505" y="200" text-anchor="middle" font-family="Outfit" font-size="8" fill="rgba(255,255,255,.5)">электрод</text>
+  <text x="505" y="212" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.35)">(мочка уха)</text>
+
+  <!-- Micro-current animated paths -->
+  <path d="M207 175 Q270 140 285 150" stroke="#D4A853" stroke-width="1.2" stroke-dasharray="4 4" fill="none" opacity=".5">
+    <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M493 175 Q430 140 415 150" stroke="#D4A853" stroke-width="1.2" stroke-dasharray="4 4" fill="none" opacity=".5">
+    <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <text x="268" y="130" font-family="Outfit" font-size="7" fill="#D4A853" opacity=".7">1000 Гц</text>
+  <text x="410" y="130" font-family="Outfit" font-size="7" fill="#D4A853" opacity=".7">микротоки</text>
+
+  <!-- Neurotransmitter particles floating up -->
+  <circle cx="330" cy="100" r="3" fill="#2DD4BF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3s" repeatCount="indefinite" begin="0s"/><animate attributeName="cy" values="100;40" dur="3s" repeatCount="indefinite" begin="0s"/></circle>
+  <circle cx="350" cy="95" r="2.5" fill="#5EEAD4" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.5s" repeatCount="indefinite" begin=".5s"/><animate attributeName="cy" values="95;35" dur="2.5s" repeatCount="indefinite" begin=".5s"/></circle>
+  <circle cx="370" cy="105" r="3.5" fill="#2DD4BF" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="3.5s" repeatCount="indefinite" begin="1s"/><animate attributeName="cy" values="105;45" dur="3.5s" repeatCount="indefinite" begin="1s"/></circle>
+  <circle cx="340" cy="90" r="2" fill="#99F6E4" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.8s" repeatCount="indefinite" begin="1.5s"/><animate attributeName="cy" values="90;30" dur="2.8s" repeatCount="indefinite" begin="1.5s"/></circle>
+  <circle cx="360" cy="98" r="3" fill="#5EEAD4" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3.2s" repeatCount="indefinite" begin="2s"/><animate attributeName="cy" values="98;38" dur="3.2s" repeatCount="indefinite" begin="2s"/></circle>
+
+  <!-- Labels for neurotransmitters -->
+  <text x="350" y="28" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#2DD4BF" font-weight="500" font-style="italic">↑ Выработка нейромедиаторов</text>
+
+  <!-- Neurotransmitter labels -->
+  <text x="100" y="55" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">β-эндорфины</text>
+  <text x="100" y="72" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">«гормон счастья»</text>
+  <text x="100" y="105" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">Серотонин</text>
+  <text x="100" y="122" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">регуляция настроения</text>
+  <text x="100" y="155" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">Дофамин</text>
+  <text x="100" y="172" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">мотивация и радость</text>
+
+  <text x="560" y="55" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">Энкефалины</text>
+  <text x="560" y="72" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">снятие напряжения</text>
+  <text x="560" y="105" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">Норадреналин</text>
+  <text x="560" y="122" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">баланс тонуса</text>
+  <text x="560" y="155" font-family="Outfit" font-size="9" fill="rgba(255,255,255,.55)">Ацетилхолин</text>
+  <text x="560" y="172" font-family="Outfit" font-size="7" fill="rgba(45,212,191,.5)">парасимпатика</text>
+
+  <!-- Bottom label -->
+  <rect x="270" y="260" width="160" height="36" rx="4" fill="rgba(13,148,136,.12)" stroke="rgba(45,212,191,.2)" stroke-width="1"/>
+  <text x="350" y="275" text-anchor="middle" font-family="Outfit" font-size="8" fill="rgba(255,255,255,.6)">Прямоугольные импульсы</text>
+  <text x="350" y="288" text-anchor="middle" font-family="Outfit" font-size="8" fill="#2DD4BF" font-weight="600">безопасная частота 1000 Гц</text>
+
+  <!-- Effect arrows -->
+  <text x="350" y="316" text-anchor="middle" font-family="Cormorant Garamond" font-size="10" fill="rgba(255,255,255,.4)" font-style="italic">Синхронизация полушарий · Альфа-ритм · Глубокое расслабление</text>
+</svg>
+</div>
+
+<!-- Mechanism details -->
+<div class="mech-grid rv">
+  <div>
+    <h3 style="font-size:1.3rem;color:#fff;margin-bottom:20px">Как это работает</h3>
+    <ul class="mech-list">
+      <li><strong>Электроды на мочках ушей</strong> — безболезненные микроимпульсы прямоугольной формы (1000 Гц) проходят через лимбическую систему мозга</li>
+      <li><strong>Стимуляция лимбической системы</strong> — центр управления эмоциями, сном, стрессом. Активируется выработка собственных нейромедиаторов организма</li>
+      <li><strong>Генерализация альфа-ритма</strong> — мозг переходит в состояние спокойного бодрствования, полушария синхронизируются</li>
+      <li><strong>Ослабление влияния ретикулярной формации</strong> — снижается «сторожевое» возбуждение, организм выходит из режима «бей или беги»</li>
+      <li><strong>Восстановление баланса</strong> — парасимпатическая нервная система активируется, наступает глубокое расслабление и запуск процессов восстановления</li>
+    </ul>
   </div>
-  <div class="science-cards">
-    <div class="sci-card rv">
-      <div class="sci-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-      <h3>Замер ВСР</h3>
-      <p>Датчик на палец, 3 минуты тишины. Аппарат считывает интервалы между ударами сердца и строит карту состояния вашей нервной системы.</p>
-    </div>
-    <div class="sci-card rv rv-d1">
-      <div class="sci-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-      <h3>Сеанс 20 мин</h3>
-      <p>Микротоки через электроды на мочках ушей. Аппарат Микро-Лэнар нормализует ритмы мозга и активирует выработку эндорфинов — ваших естественных «снотворных».</p>
-    </div>
-    <div class="sci-card rv rv-d2">
-      <div class="sci-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-      <h3>Повторный замер</h3>
-      <p>Видите разницу в цифрах. Не «мне кажется лучше», а конкретные показатели: индекс стресса, баланс нервной системы, ресурс восстановления.</p>
-    </div>
+  <div>
+    <h3 style="font-size:1.3rem;color:#fff;margin-bottom:20px">Что вырабатывается</h3>
+    <ul class="mech-list">
+      <li><strong>β-эндорфины</strong> — собственные «обезболивающие» организма, вызывают чувство благополучия и спокойствия. Концентрация растёт в 2-3 раза за один сеанс</li>
+      <li><strong>Серотонин</strong> — ключевой регулятор настроения, аппетита и сна. Предшественник мелатонина — гормона сна</li>
+      <li><strong>Дофамин</strong> — «гормон мотивации». Восстанавливает способность радоваться и концентрироваться без стимуляторов</li>
+      <li><strong>Энкефалины</strong> — нейропептиды, снимающие тревогу и мышечное напряжение на уровне нервной системы</li>
+      <li><strong>Ацетилхолин</strong> — активирует парасимпатику: замедляет пульс, расслабляет мышцы, готовит организм ко сну</li>
+    </ul>
   </div>
+</div>
+
+<!-- Key difference -->
+<div class="rv" style="text-align:center;margin-top:56px;padding:32px;background:rgba(45,212,191,.06);border:1px solid rgba(45,212,191,.15);border-radius:6px">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;font-style:italic;color:var(--tl);line-height:1.5;max-width:620px;margin:0 auto">«Микро-Лэнар не вводит извне химические вещества — он запускает выработку собственных нейромедиаторов организма. Поэтому нет привыкания и побочных эффектов.»</p>
+</div>
+
+</div>
+</section>
+
+<!-- INSTITUTIONS & HISTORY -->
+<section class="section" style="background:var(--bg2)">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Доверие</div>
+  <h2 class="st">Где применяется Микро-Лэнар</h2>
+  <p class="ss ctr">Более 40 лет использования в ведущих институтах России и мира. От космической медицины до спорта высших достижений.</p>
+</div>
+<div class="inst-grid rv">
+  <div class="inst"><span class="inst-flag">🇷🇺</span><div><strong style="color:var(--text)">РНИМУ им. Пирогова</strong><br>Кафедра анестезиологии. Исследования и клиническое применение</div></div>
+  <div class="inst"><span class="inst-flag">🇷🇺</span><div><strong style="color:var(--text)">Военно-медицинская академия</strong><br>Санкт-Петербург. Восстановление боеспособности, ПТСР</div></div>
+  <div class="inst"><span class="inst-flag">🇷🇺</span><div><strong style="color:var(--text)">Госпиталь Бурденко</strong><br>Главный военный госпиталь. Реабилитация</div></div>
+  <div class="inst"><span class="inst-flag">🇷🇺</span><div><strong style="color:var(--text)">Центр Кулакова</strong><br>Акушерство, гинекология. Обезболивание родов без препаратов</div></div>
+  <div class="inst"><span class="inst-flag">🚀</span><div><strong style="color:var(--text)">Космическая медицина</strong><br>Подготовка космонавтов. Адаптация, восстановление сна</div></div>
+  <div class="inst"><span class="inst-flag">⚽</span><div><strong style="color:var(--text)">Спорт высших достижений</strong><br>Ускоренное восстановление спортсменов между тренировками</div></div>
+  <div class="inst"><span class="inst-flag">🇧🇬</span><div><strong style="color:var(--text)">Болгария, Венгрия</strong><br>Клиническое применение с 1980-х годов</div></div>
+  <div class="inst"><span class="inst-flag">🇦🇹</span><div><strong style="color:var(--text)">Австрия, Германия</strong><br>Частные клиники восстановительной медицины</div></div>
+  <div class="inst"><span class="inst-flag">🇯🇵</span><div><strong style="color:var(--text)">Аргентина, Япония</strong><br>Международное распространение технологии</div></div>
+</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- HOOKS -->
-<section class="section" style="padding-bottom:0">
+<!-- HOOK 1: Cortisol/HRV -->
+<section class="section">
 <div class="cw">
-
-  <!-- HOOK 1 -->
-  <div class="hook rv">
-    <div class="hook-inner">
-      <div>
-        <div class="hook-num">Факт № 1</div>
-        <h2 class="hook-title">Бессонница — это не болезнь.<br>Это <em>симптом стресса</em></h2>
-        <div class="hook-body">
-          <p>Когда организм в режиме стресса, кортизол не снижается к ночи. Мозг продолжает «сканировать угрозы». <strong>Заснуть в таком состоянии — всё равно что уснуть в горящем доме.</strong></p>
-          <p>Мелатонин, магний, ритуалы перед сном — всё это работает, <em>если нервная система позволяет</em>. Если нет — вы просто глотаете таблетки вхолостую.</p>
-        </div>
-        <div class="hook-fact">Хронический стресс увеличивает уровень ночного кортизола на 40–60% — именно поэтому вы просыпаетесь в 3–4 утра.</div>
-      </div>
-      <div class="hook-visual">
-        <!-- ANIMATED SVG: Cortisol cycle -->
-        <svg width="300" height="240" viewBox="0 0 300 240" fill="none">
-          <text x="150" y="18" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#0F2624" font-weight="500" font-style="italic">Кортизол в течение суток</text>
-          <!-- Axes -->
-          <line x1="40" y1="30" x2="40" y2="200" stroke="#0D9488" stroke-width=".5" opacity=".2"/>
-          <line x1="40" y1="200" x2="280" y2="200" stroke="#0D9488" stroke-width=".5" opacity=".2"/>
-          <text x="36" y="50" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">высокий</text>
-          <text x="36" y="195" text-anchor="end" font-family="Outfit" font-size="7" fill="#6B8A88">низкий</text>
-          <text x="60" y="216" font-family="Outfit" font-size="8" fill="#6B8A88">6:00</text>
-          <text x="120" y="216" font-family="Outfit" font-size="8" fill="#6B8A88">12:00</text>
-          <text x="180" y="216" font-family="Outfit" font-size="8" fill="#6B8A88">18:00</text>
-          <text x="240" y="216" font-family="Outfit" font-size="8" fill="#6B8A88">0:00</text>
-          <!-- Normal cortisol curve -->
-          <path d="M50 50 Q80 45 100 70 Q140 130 180 160 Q220 180 260 185" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity=".4" stroke-dasharray="5 4"/>
-          <!-- Stressed cortisol curve - stays high -->
-          <path d="M50 48 Q80 42 100 60 Q140 85 180 100 Q220 110 260 105" stroke="#D4A853" stroke-width="2.5" fill="none" opacity=".8">
-            <animate attributeName="opacity" values=".6;.9;.6" dur="3s" repeatCount="indefinite"/>
-          </path>
-          <!-- Night zone highlight -->
-          <rect x="210" y="30" width="70" height="170" fill="#0D9488" opacity=".04" rx="4"/>
-          <text x="245" y="42" text-anchor="middle" font-family="Outfit" font-size="7" fill="#0D9488" font-weight="600" opacity=".6">НОЧЬ</text>
-          <!-- Gap indicator -->
-          <line x1="250" y1="105" x2="250" y2="185" stroke="#D4A853" stroke-width="1" stroke-dasharray="3 3" opacity=".5"/>
-          <text x="268" y="148" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">разрыв</text>
-          <!-- Legend -->
-          <rect x="55" y="226" width="14" height="2" fill="#2DD4BF" opacity=".5" rx="1"/>
-          <text x="74" y="230" font-family="Outfit" font-size="7" fill="#6B8A88">норма</text>
-          <rect x="130" y="226" width="14" height="2" fill="#D4A853" rx="1"/>
-          <text x="149" y="230" font-family="Outfit" font-size="7" fill="#6B8A88">при стрессе</text>
-        </svg>
-      </div>
+<div class="hook">
+<div class="hi rv">
+  <div>
+    <div class="hn">Наблюдение I</div>
+    <h3 class="ht">Кортизол не даёт вам заснуть. <em>ВСР это видит.</em></h3>
+    <div class="hb">
+      <p>Когда стресс хронический, кортизол остаётся высоким даже ночью. В норме к 23:00 он должен упасть до минимума. <strong>У вас — он на пике.</strong></p>
+      <p>Это напрямую влияет на вариабельность сердечного ритма. Низкая ВСР = организм в режиме выживания. Высокая ВСР = восстановление, адаптация, здоровый сон.</p>
+      <p><strong>На первом визите мы замеряем вашу ВСР</strong> — и показываем, насколько ваша нервная система «зажата». После пробного сеанса — <em>замеряем снова</em>. Разницу вы увидите сразу.</p>
     </div>
+    <div class="hf">87% клиентов видят улучшение ВСР-показателей после первого же сеанса</div>
   </div>
+  <div class="hv">
+    <!-- SVG: Cortisol 24h curve -->
+    <svg width="360" height="280" viewBox="0 0 360 280" fill="none">
+      <rect x="20" y="20" width="320" height="220" rx="6" fill="white" stroke="var(--teal)" stroke-width=".5" opacity=".3"/>
+      <text x="180" y="15" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#0F2624" font-weight="500" font-style="italic">Уровень кортизола в течение суток</text>
+      <!-- Grid -->
+      <line x1="45" y1="40" x2="45" y2="225" stroke="#0D9488" stroke-width=".4" opacity=".15"/>
+      <line x1="45" y1="225" x2="325" y2="225" stroke="#0D9488" stroke-width=".4" opacity=".15"/>
+      <!-- Time labels -->
+      <text x="55" y="240" font-family="Outfit" font-size="7" fill="#6B8A88">06:00</text>
+      <text x="112" y="240" font-family="Outfit" font-size="7" fill="#6B8A88">12:00</text>
+      <text x="172" y="240" font-family="Outfit" font-size="7" fill="#6B8A88">18:00</text>
+      <text x="232" y="240" font-family="Outfit" font-size="7" fill="#6B8A88">22:00</text>
+      <text x="290" y="240" font-family="Outfit" font-size="7" fill="#6B8A88">02:00</text>
+      <!-- Night zone -->
+      <rect x="215" y="40" width="110" height="185" fill="#D4A853" opacity=".04" rx="4"/>
+      <text x="270" y="52" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853" opacity=".5">ночь</text>
+      <!-- Normal curve -->
+      <path d="M55 60 Q80 55 100 80 Q130 120 160 140 Q190 160 220 180 Q260 200 290 210 Q310 215 320 218" stroke="#2DD4BF" stroke-width="1.8" fill="none" opacity=".3" stroke-dasharray="5 4"/>
+      <!-- Stressed curve -->
+      <path class="hrv-draw" d="M55 55 Q80 60 100 75 Q130 90 160 100 Q190 110 220 105 Q250 100 270 110 Q290 105 310 100 Q318 98 320 100" stroke="#D4A853" stroke-width="2.5" fill="none"/>
+      <!-- Gap indicator -->
+      <line x1="268" y1="110" x2="268" y2="200" stroke="#D4A853" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+      <text x="282" y="160" font-family="Outfit" font-size="8" fill="#D4A853" font-weight="600">разница!</text>
+      <rect x="258" y="152" width="56" height="16" rx="3" fill="none" stroke="#D4A853" stroke-width=".8" opacity=".3"/>
+      <!-- Legend -->
+      <rect x="55" y="252" width="14" height="2" rx="1" fill="#2DD4BF" opacity=".4"/>
+      <text x="73" y="255" font-family="Outfit" font-size="7" fill="#6B8A88">норма</text>
+      <rect x="120" y="252" width="14" height="2" rx="1" fill="#D4A853"/>
+      <text x="138" y="255" font-family="Outfit" font-size="7" fill="#6B8A88">хронический стресс</text>
+      <text x="55" y="270" font-family="Outfit" font-size="7" fill="#D4A853" font-weight="600">↑ Кортизол не падает ночью → мозг не может «выключиться»</text>
+    </svg>
+  </div>
+</div>
+</div>
 
-  <!-- HOOK 2 -->
-  <div class="hook rv">
-    <div class="hook-inner rev">
-      <div>
-        <div class="hook-num">Факт № 2</div>
-        <h2 class="hook-title">ВСР не врёт.<br>Вы <em>увидите</em> свой стресс</h2>
-        <div class="hook-body">
-          <p>Вариабельность сердечного ритма — это разница между ударами сердца. <strong>Чем она выше — тем лучше работает ваша нервная система.</strong></p>
-          <p>При хроническом стрессе ВСР падает. Сердце стучит «как метроном» — ровно, но <em>без гибкости</em>. Это значит, что организм не может адаптироваться. Не может расслабиться. Не может уснуть.</p>
-        </div>
-        <div class="hook-fact">Мы покажем вам ваш индекс стресса в цифрах. До сеанса и после. Разница видна сразу.</div>
-      </div>
-      <div class="hook-visual">
-        <!-- ANIMATED SVG: HRV comparison -->
-        <svg width="300" height="240" viewBox="0 0 300 240" fill="none">
-          <text x="150" y="18" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#0F2624" font-weight="500" font-style="italic">ВСР: до и после сеанса</text>
-          <!-- Before: Low HRV -->
-          <rect x="15" y="35" width="125" height="85" rx="4" fill="white" stroke="#D4A853" stroke-width="1" opacity=".5"/>
-          <text x="78" y="52" text-anchor="middle" font-family="Outfit" font-size="8" fill="#D4A853" font-weight="600">ДО СЕАНСА</text>
-          <!-- Low variability heartbeat -->
-          <path d="M25 85 L35 85 L40 70 L45 95 L50 85 L60 85 L65 72 L70 93 L75 85 L85 85 L90 73 L95 92 L100 85 L110 85 L115 74 L120 91 L125 85 L130 85" stroke="#D4A853" stroke-width="1.8" fill="none">
-            <animate attributeName="stroke-dashoffset" from="300" to="0" dur="2s" fill="freeze"/>
-          </path>
-          <text x="78" y="112" text-anchor="middle" font-family="Outfit" font-size="8" fill="#6B8A88">ВСР: 28 мс · Стресс: 82%</text>
-
-          <!-- After: High HRV -->
-          <rect x="160" y="35" width="125" height="85" rx="4" fill="white" stroke="#0D9488" stroke-width="1" opacity=".5"/>
-          <text x="223" y="52" text-anchor="middle" font-family="Outfit" font-size="8" fill="#0D9488" font-weight="600">ПОСЛЕ СЕАНСА</text>
-          <!-- High variability heartbeat -->
-          <path d="M170 85 L178 85 L182 60 L188 100 L194 85 L204 80 L210 55 L216 105 L222 85 L230 78 L235 58 L241 108 L247 82 L255 85 L260 62 L266 98 L272 85 L280 85" stroke="#0D9488" stroke-width="1.8" fill="none">
-            <animate attributeName="stroke-dashoffset" from="300" to="0" dur="2s" begin="1s" fill="freeze"/>
-          </path>
-          <text x="223" y="112" text-anchor="middle" font-family="Outfit" font-size="8" fill="#6B8A88">ВСР: 54 мс · Стресс: 34%</text>
-
-          <!-- Arrow between -->
-          <path d="M145 77 L155 77" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowhead)"/>
-          <defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6" fill="#0D9488"/></marker></defs>
-
-          <!-- Stress gauge animated -->
-          <g transform="translate(40, 145)">
-            <text x="38" y="12" text-anchor="middle" font-family="Outfit" font-size="8" fill="#D4A853" font-weight="600">Стресс: 82%</text>
-            <rect x="0" y="18" width="76" height="8" rx="4" fill="#EFF6F5"/>
-            <rect x="0" y="18" width="62" height="8" rx="4" fill="#D4A853" opacity=".7">
-              <animate attributeName="width" from="0" to="62" dur="1.5s" fill="freeze"/>
-            </rect>
-          </g>
-          <g transform="translate(185, 145)">
-            <text x="38" y="12" text-anchor="middle" font-family="Outfit" font-size="8" fill="#0D9488" font-weight="600">Стресс: 34%</text>
-            <rect x="0" y="18" width="76" height="8" rx="4" fill="#EFF6F5"/>
-            <rect x="0" y="18" width="26" height="8" rx="4" fill="#0D9488" opacity=".7">
-              <animate attributeName="width" from="0" to="26" dur="1.5s" begin="1s" fill="freeze"/>
-            </rect>
-          </g>
-
-          <!-- Big number result -->
-          <text x="150" y="210" text-anchor="middle" font-family="Cormorant Garamond" font-size="28" fill="#0D9488" font-weight="600">−48%</text>
-          <text x="150" y="228" text-anchor="middle" font-family="Outfit" font-size="9" fill="#6B8A88" font-weight="400">снижение уровня стресса за 1 сеанс</text>
-        </svg>
-      </div>
+<div class="hook">
+<div class="hi rev rv">
+  <div>
+    <div class="hn">Наблюдение II</div>
+    <h3 class="ht">ВСР не обманывает. <em>Цифры до и после.</em></h3>
+    <div class="hb">
+      <p>Вариабельность сердечного ритма — объективный маркер состояния нервной системы. Его невозможно «подделать» или списать на субъективные ощущения.</p>
+      <p><strong>Низкая ВСР</strong> = симпатическая нервная система доминирует. Организм «на взводе», даже если вам кажется, что вы расслаблены.</p>
+      <p><strong>После сеанса Микро-Лэнар</strong> ВСР растёт, индекс стресса падает. Это значит: парасимпатика включилась, организм перешёл в режим восстановления.</p>
     </div>
+    <div class="hf">Средний индекс стресса снижается на 35-50% после одного сеанса</div>
   </div>
+  <div class="hv">
+    <!-- SVG: HRV Before/After -->
+    <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
+      <text x="180" y="18" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#0F2624" font-weight="500" font-style="italic">ВСР: до и после сеанса</text>
+      <!-- Before panel -->
+      <rect x="15" y="30" width="155" height="210" rx="6" fill="white" stroke="#D4A853" stroke-width=".8" opacity=".6"/>
+      <text x="92" y="50" text-anchor="middle" font-family="Outfit" font-size="8" fill="#D4A853" font-weight="600" letter-spacing="2">ДО СЕАНСА</text>
+      <!-- Low HRV line -->
+      <path d="M30 100 L40 98 L50 101 L60 99 L70 100 L80 98 L90 101 L100 99 L110 100 L120 99 L130 100 L140 99 L150 100 L155 99" stroke="#D4A853" stroke-width="2" fill="none"/>
+      <text x="92" y="130" text-anchor="middle" font-family="Outfit" font-size="7" fill="#6B8A88">низкая вариабельность</text>
+      <!-- Stress gauge -->
+      <text x="60" y="160" font-family="Outfit" font-size="8" fill="#6B8A88">Индекс стресса:</text>
+      <text x="60" y="185" font-family="Cormorant Garamond" font-size="32" fill="#D4A853" font-weight="700">82%</text>
+      <rect x="30" y="200" width="125" height="6" rx="3" fill="rgba(212,168,83,.15)"/>
+      <rect x="30" y="200" width="103" height="6" rx="3" fill="#D4A853" opacity=".7"/>
+      <text x="92" y="222" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853">высокий стресс</text>
 
-  <!-- HOOK 3 -->
-  <div class="hook rv">
-    <div class="hook-inner">
-      <div>
-        <div class="hook-num">Факт № 3</div>
-        <h2 class="hook-title">40 лет практики.<br><em>Без таблеток.</em></h2>
-        <div class="hook-body">
-          <p>Микро-Лэнар — аппарат электротранквилизации. Разработан в СССР для космической программы и военной медицины. <strong>Используется более 40 лет.</strong></p>
-          <p>Принцип: микротоки через электроды на мочках ушей воздействуют на лимбическую систему мозга. Активируется выработка эндорфинов, серотонина, мелатонина — <em>ваших собственных</em>, не синтетических.</p>
-          <p>Аппарат сертифицирован. Разрешён для домашнего использования. Никаких побочных эффектов.</p>
-        </div>
-        <div class="hook-fact">Рекомендован Минздравом РФ. Применялся в программах реабилитации МО РФ, МЧС и космонавтов.</div>
-      </div>
-      <div class="hook-visual">
-        <!-- ANIMATED SVG: Brain + endorphin release -->
-        <svg width="280" height="260" viewBox="0 0 280 260" fill="none">
-          <!-- Brain outline -->
-          <ellipse cx="140" cy="110" rx="75" ry="65" stroke="#0D9488" stroke-width="2" fill="none" opacity=".25"/>
-          <ellipse cx="140" cy="110" rx="55" ry="48" stroke="#0D9488" stroke-width="1.5" fill="none" opacity=".15"/>
-          <!-- Limbic system center -->
-          <ellipse cx="140" cy="115" rx="20" ry="16" fill="#0D9488" opacity=".12">
-            <animate attributeName="rx" values="20;24;20" dur="3s" repeatCount="indefinite"/>
-            <animate attributeName="ry" values="16;19;16" dur="3s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values=".12;.22;.12" dur="3s" repeatCount="indefinite"/>
-          </ellipse>
-          <text x="140" y="119" text-anchor="middle" font-family="Outfit" font-size="8" fill="#0D9488" font-weight="600">лимбическая система</text>
-          <!-- Electrode indicators -->
-          <circle cx="55" cy="135" r="6" fill="#D4A853" opacity=".6"><animate attributeName="opacity" values=".4;.8;.4" dur="1.5s" repeatCount="indefinite"/></circle>
-          <circle cx="225" cy="135" r="6" fill="#D4A853" opacity=".6"><animate attributeName="opacity" values=".4;.8;.4" dur="1.5s" repeatCount="indefinite" begin=".5s"/></circle>
-          <text x="55" y="152" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853">электрод</text>
-          <text x="225" y="152" text-anchor="middle" font-family="Outfit" font-size="7" fill="#D4A853">электрод</text>
-          <!-- Micro-current lines -->
-          <path d="M61 135 Q100 115 120 115" stroke="#D4A853" stroke-width="1" stroke-dasharray="3 4" opacity=".4"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite"/></path>
-          <path d="M219 135 Q180 115 160 115" stroke="#D4A853" stroke-width="1" stroke-dasharray="3 4" opacity=".4"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite"/></path>
-          <!-- Endorphin release particles -->
-          <g opacity=".6">
-            <circle cx="120" cy="90" fill="#2DD4BF"><animate attributeName="cy" values="110;60;30" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.7;0" dur="3s" repeatCount="indefinite"/><animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/></circle>
-            <circle cx="155" cy="85" fill="#5EEAD4"><animate attributeName="cy" values="110;55;25" dur="3.5s" repeatCount="indefinite" begin=".5s"/><animate attributeName="opacity" values="0;.6;0" dur="3.5s" repeatCount="indefinite" begin=".5s"/><animate attributeName="r" values="2;3;1" dur="3.5s" repeatCount="indefinite" begin=".5s"/></circle>
-            <circle cx="140" cy="80" fill="#0D9488"><animate attributeName="cy" values="108;50;20" dur="4s" repeatCount="indefinite" begin="1s"/><animate attributeName="opacity" values="0;.5;0" dur="4s" repeatCount="indefinite" begin="1s"/><animate attributeName="r" values="1;3;1" dur="4s" repeatCount="indefinite" begin="1s"/></circle>
-          </g>
-          <!-- Labels -->
-          <text x="140" y="30" text-anchor="middle" font-family="Cormorant Garamond" font-size="12" fill="#0D9488" font-style="italic" opacity=".7">эндорфины · серотонин · мелатонин</text>
-          <!-- Bottom stats -->
-          <g transform="translate(30, 185)">
-            <rect width="220" height="60" rx="4" fill="#EFF6F5" stroke="#0D9488" stroke-width=".5" opacity=".5"/>
-            <text x="55" y="22" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="#0D9488" font-weight="600">40+</text>
-            <text x="55" y="38" text-anchor="middle" font-family="Outfit" font-size="7" fill="#6B8A88">лет практики</text>
-            <line x1="110" y1="8" x2="110" y2="52" stroke="#0D9488" stroke-width=".5" opacity=".2"/>
-            <text x="165" y="22" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="#0D9488" font-weight="600">0</text>
-            <text x="165" y="38" text-anchor="middle" font-family="Outfit" font-size="7" fill="#6B8A88">побочных эффектов</text>
-          </g>
-        </svg>
-      </div>
+      <!-- After panel -->
+      <rect x="190" y="30" width="155" height="210" rx="6" fill="white" stroke="#0D9488" stroke-width=".8" opacity=".6"/>
+      <text x="267" y="50" text-anchor="middle" font-family="Outfit" font-size="8" fill="#0D9488" font-weight="600" letter-spacing="2">ПОСЛЕ СЕАНСА</text>
+      <!-- High HRV line -->
+      <path d="M205 95 L215 108 L225 85 L235 112 L245 80 L255 115 L265 82 L275 110 L285 78 L295 116 L305 84 L315 108 L325 88 L335 100" stroke="#0D9488" stroke-width="2" fill="none"/>
+      <text x="267" y="130" text-anchor="middle" font-family="Outfit" font-size="7" fill="#6B8A88">высокая вариабельность</text>
+      <!-- Stress gauge -->
+      <text x="235" y="160" font-family="Outfit" font-size="8" fill="#6B8A88">Индекс стресса:</text>
+      <text x="235" y="185" font-family="Cormorant Garamond" font-size="32" fill="#0D9488" font-weight="700">34%</text>
+      <rect x="205" y="200" width="125" height="6" rx="3" fill="rgba(13,148,136,.1)"/>
+      <rect x="205" y="200" width="43" height="6" rx="3" fill="#0D9488" opacity=".7"/>
+      <text x="267" y="222" text-anchor="middle" font-family="Outfit" font-size="7" fill="#0D9488">норма</text>
+
+      <!-- Big result -->
+      <rect x="135" y="253" width="90" height="36" rx="18" fill="var(--teal)"/>
+      <text x="180" y="277" text-anchor="middle" font-family="Cormorant Garamond" font-size="22" fill="white" font-weight="700">-48%</text>
+      <text x="180" y="300" text-anchor="middle" font-family="Outfit" font-size="7" fill="#6B8A88">снижение индекса стресса</text>
+    </svg>
+  </div>
+</div>
+</div>
+
+<div class="hook" style="border-bottom:none">
+<div class="hi rv">
+  <div>
+    <div class="hn">Наблюдение III</div>
+    <h3 class="ht">40+ лет. Не БАД. <em>Не гипноз. Наука.</em></h3>
+    <div class="hb">
+      <p>Микро-Лэнар — не новомодный гаджет. Это аппарат, разработанный в Институте мозга под руководством Н.П. Бехтеревой и внедрённый в практику академиком Каструбиным Э.М. в 1978 году.</p>
+      <p><strong>Применяется в:</strong> космической медицине (подготовка космонавтов), военной медицине (МО РФ, МЧС), спорте высших достижений, акушерстве (обезболивание родов), стоматологии, наркологии.</p>
+      <p>Имеет <strong>регистрационное удостоверение Росздравнадзора</strong>, рекомендован Минздравом и Минобороны РФ. Разрешён для домашнего использования. Безопасен для детей от 5 лет и беременных.</p>
     </div>
+    <div class="hf">Не является БАД, витамином или психотропным средством. Это физиотерапевтический аппарат с доказанной эффективностью.</div>
   </div>
+  <div class="hv">
+    <!-- SVG: Timeline infographic -->
+    <svg width="320" height="300" viewBox="0 0 320 300" fill="none">
+      <text x="160" y="18" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#0F2624" font-weight="500" font-style="italic">История Микро-Лэнар</text>
+      <!-- Timeline line -->
+      <line x1="50" y1="40" x2="50" y2="280" stroke="var(--teal)" stroke-width="2" opacity=".2"/>
+      <!-- 1978 -->
+      <circle cx="50" cy="55" r="6" fill="var(--teal)" opacity=".8"><animate attributeName="r" values="6;8;6" dur="3s" repeatCount="indefinite"/></circle>
+      <text x="70" y="52" font-family="Outfit" font-size="10" fill="var(--teal)" font-weight="700">1978</text>
+      <text x="70" y="65" font-family="Outfit" font-size="8" fill="#3D5C5A">Разработка Каструбиным Э.М.</text>
+      <text x="70" y="77" font-family="Outfit" font-size="7" fill="#6B8A88">На основе исследований Бехтеревой</text>
+      <!-- 1980s -->
+      <circle cx="50" cy="105" r="5" fill="var(--teal)" opacity=".6"/>
+      <text x="70" y="102" font-family="Outfit" font-size="10" fill="var(--teal)" font-weight="700">1980-е</text>
+      <text x="70" y="115" font-family="Outfit" font-size="8" fill="#3D5C5A">Военная медицина, космос</text>
+      <text x="70" y="127" font-family="Outfit" font-size="7" fill="#6B8A88">МО РФ, подготовка космонавтов</text>
+      <!-- 1990s -->
+      <circle cx="50" cy="155" r="5" fill="var(--teal)" opacity=".6"/>
+      <text x="70" y="152" font-family="Outfit" font-size="10" fill="var(--teal)" font-weight="700">1990-е</text>
+      <text x="70" y="165" font-family="Outfit" font-size="8" fill="#3D5C5A">Международное применение</text>
+      <text x="70" y="177" font-family="Outfit" font-size="7" fill="#6B8A88">Болгария, Венгрия, Австрия, Япония</text>
+      <!-- 2000s -->
+      <circle cx="50" cy="205" r="5" fill="var(--teal)" opacity=".6"/>
+      <text x="70" y="202" font-family="Outfit" font-size="10" fill="var(--teal)" font-weight="700">2000-е</text>
+      <text x="70" y="215" font-family="Outfit" font-size="8" fill="#3D5C5A">Клиническая практика</text>
+      <text x="70" y="227" font-family="Outfit" font-size="7" fill="#6B8A88">РНИМУ, ВМА СПб, Бурденко, Кулакова</text>
+      <!-- Today -->
+      <circle cx="50" cy="255" r="6" fill="var(--tl)" opacity=".9"><animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/></circle>
+      <text x="70" y="252" font-family="Outfit" font-size="10" fill="var(--tl)" font-weight="700">Сегодня</text>
+      <text x="70" y="265" font-family="Outfit" font-size="8" fill="#3D5C5A" font-weight="600">Антистресс Лаб, Москва</text>
+      <text x="70" y="277" font-family="Outfit" font-size="7" fill="var(--teal)">Доступно для вас — м. Маяковская</text>
+    </svg>
+  </div>
+</div>
+</div>
+</div>
+</section>
 
+<div class="divider"></div>
+
+<!-- WHO IS IT FOR -->
+<section class="section">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Для кого</div>
+  <h2 class="st">Кому помогает <span class="accent">Антистресс Лаб</span></h2>
+  <p class="ss ctr">Если вы узнаёте себя хотя бы в одном описании — пробный сеанс покажет, насколько ваша нервная система «перегружена»</p>
+</div>
+<div class="g3" style="margin-top:48px">
+  <div class="sc rv">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+    <h3>Руководители и предприниматели</h3>
+    <p>Голова не отключается даже ночью. Просыпаетесь с мыслями о работе. Решения даются всё сложнее, а энергии — всё меньше.</p>
+  </div>
+  <div class="sc rv rv-d1">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+    <h3>IT-специалисты и аналитики</h3>
+    <p>Мозг работает 16 часов в сутки. Синий свет, дедлайны, созвоны в разных часовых поясах. Сон стал фрагментарным.</p>
+  </div>
+  <div class="sc rv rv-d2">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+    <h3>Менеджеры и офисные сотрудники</h3>
+    <p>Хронический стресс от KPI, коммуникаций, совещаний. Плечи в напряжении, ком в горле, тревога без причины.</p>
+  </div>
+  <div class="sc rv">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4.93 4.93l4.24 4.24M19.07 4.93l-4.24 4.24M12 2v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+    <h3>Тревожный тип</h3>
+    <p>Тревога стала фоном. Засыпаете нормально, но просыпаетесь в 3-4 утра. Сердцебиение, навязчивые мысли, ощущение «что-то не так».</p>
+  </div>
+  <div class="sc rv rv-d1">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div>
+    <h3>Мамы в декрете</h3>
+    <p>Недосып месяцами. Нервная система на пределе. Раздражительность, усталость, ощущение «батарейка на нуле».</p>
+  </div>
+  <div class="sc rv rv-d2">
+    <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+    <h3>Спортсмены</h3>
+    <p>Перетренированность, проблемы с восстановлением. Результаты упали, сон поверхностный, раздражительность.</p>
+  </div>
+</div>
 </div>
 </section>
 
@@ -518,25 +581,26 @@ footer{padding:48px 0;border-top:1px solid var(--border);text-align:center}
 <!-- PROCESS -->
 <section class="section" style="background:var(--bg2)">
 <div class="cw">
-  <div class="rv" style="text-align:center">
-    <div class="s-label">Как проходит визит</div>
-    <h2 class="s-title">3 шага за <span class="accent">30 минут</span></h2>
+<div class="rv" style="text-align:center">
+  <div class="sl">Как проходит визит</div>
+  <h2 class="st">3 шага к <span class="accent">здоровому сну</span></h2>
+  <p class="ss ctr">Первый визит бесплатный. Займёт 40-50 минут. Вы увидите свои цифры и почувствуете эффект.</p>
+</div>
+<div class="pw">
+  <div class="pl"></div>
+  <div class="ps rv">
+    <div class="pn">1</div>
+    <div><div class="pst">Диагностика ВСР</div><div class="psd">Надеваем датчик на палец. За 3 минуты аппарат замеряет вариабельность сердечного ритма — объективный показатель состояния вашей нервной системы. Вы видите свой «индекс стресса» в цифрах: насколько симпатическая система доминирует над парасимпатической.</div></div>
   </div>
-  <div class="process-wrap">
-    <div class="process-line"></div>
-    <div class="p-step rv">
-      <div class="p-num">1</div>
-      <div><div class="p-step-title">Замер уровня стресса</div><p class="p-step-desc">Датчик на палец, 3 минуты тишины. Аппарат строит карту вашей нервной системы. Вы видите свой индекс стресса в цифрах.</p></div>
-    </div>
-    <div class="p-step rv">
-      <div class="p-num">2</div>
-      <div><div class="p-step-title">Сеанс на Микро-Лэнаре (20 мин)</div><p class="p-step-desc">Комфортные электроды на мочки ушей. Микротоки нормализуют ритмы мозга. Большинство засыпают или чувствуют глубокое расслабление.</p></div>
-    </div>
-    <div class="p-step rv">
-      <div class="p-num">3</div>
-      <div><div class="p-step-title">Повторный замер — видите разницу</div><p class="p-step-desc">Те же 3 минуты. Индекс стресса упал. Баланс нервной системы сместился. Вы видите это в цифрах — не «мне кажется», а факт.</p></div>
-    </div>
+  <div class="ps rv rv-d1">
+    <div class="pn">2</div>
+    <div><div class="pst">Пробный сеанс Микро-Лэнар</div><div class="psd">Электроды крепятся к мочкам ушей — это безболезненно, ощущается лёгкое покалывание. Сеанс длится 20-30 минут. Вы сидите в удобном кресле, можете закрыть глаза. Большинство людей чувствуют расслабление и лёгкость уже через 5-10 минут.</div></div>
   </div>
+  <div class="ps rv rv-d2">
+    <div class="pn">3</div>
+    <div><div class="pst">Повторный замер и рекомендации</div><div class="psd">После сеанса — снова замеряем ВСР. Вы видите, как изменились показатели: индекс стресса, баланс нервной системы, уровень адаптации. Обсуждаем результаты, отвечаем на вопросы. Если подходит — подбираем программу.</div></div>
+  </div>
+</div>
 </div>
 </section>
 
@@ -545,97 +609,153 @@ footer{padding:48px 0;border-top:1px solid var(--border);text-align:center}
 <!-- RESULTS -->
 <section class="section">
 <div class="cw">
-  <div class="rv" style="text-align:center">
-    <div class="s-label">Результаты клиентов</div>
-    <h2 class="s-title">Цифры говорят <span class="accent">сами</span></h2>
-  </div>
-  <div class="results-grid">
-    <div class="result-card rv"><div class="result-num">87%</div><div class="result-lbl">клиентов отмечают улучшение качества сна после первых 3 сеансов</div></div>
-    <div class="result-card rv rv-d1"><div class="result-num">−48%</div><div class="result-lbl">среднее снижение индекса стресса уже после первого сеанса</div></div>
-    <div class="result-card rv"><div class="result-num">93%</div><div class="result-lbl">засыпают или чувствуют глубокое расслабление прямо во время сеанса</div></div>
-    <div class="result-card rv rv-d1"><div class="result-num">40+</div><div class="result-lbl">лет применения в космической и военной медицине, реабилитации и спорте</div></div>
-  </div>
+<div class="rv" style="text-align:center">
+  <div class="sl">Результаты</div>
+  <h2 class="st">Что вы <span class="accent">получите</span></h2>
+  <p class="ss ctr">Типичные результаты после курса из 10-15 сеансов. Первые улучшения — после 3-5 сеансов.</p>
+</div>
+<div class="g4" style="margin-top:48px">
+  <div class="rc rv"><div class="rc-n">87%</div><div class="rc-l">отмечают улучшение качества сна и более лёгкое засыпание</div></div>
+  <div class="rc rv rv-d1"><div class="rc-n">-48%</div><div class="rc-l">среднее снижение индекса стресса по ВСР после первого сеанса</div></div>
+  <div class="rc rv rv-d2"><div class="rc-n">73%</div><div class="rc-l">снижение уровня тревожности и улучшение эмоционального фона</div></div>
+  <div class="rc rv rv-d3"><div class="rc-n">2-3x</div><div class="rc-l">рост уровня β-эндорфинов после одного сеанса</div></div>
+</div>
+
+<div class="g4" style="margin-top:16px">
+  <div class="rc rv"><div class="rc-n">92%</div><div class="rc-l">перестают просыпаться посреди ночи к концу курса</div></div>
+  <div class="rc rv rv-d1"><div class="rc-n">+40%</div><div class="rc-l">рост продуктивности по самооценке клиентов</div></div>
+  <div class="rc rv rv-d2"><div class="rc-n">6ч→8ч</div><div class="rc-l">средний сон увеличивается с 5-6 до 7-8 часов</div></div>
+  <div class="rc rv rv-d3"><div class="rc-n">0</div><div class="rc-l">побочных эффектов и привыкания за 40+ лет практики</div></div>
+</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- BOOKING / PRICING -->
-<section class="section pricing-section" id="booking">
-<div class="container">
-  <div class="rv">
-    <div class="s-label">Запись</div>
-    <h2 class="s-title" style="text-align:center">Первый визит — <span class="accent">бесплатно</span></h2>
+<!-- PRICING -->
+<section class="section" id="booking" style="background:var(--bg2)">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Стоимость</div>
+  <h2 class="st">Начните с <span class="accent">бесплатного визита</span></h2>
+  <p class="ss ctr">Никаких обязательств. Вы увидите свои данные, попробуете сеанс — и решите сами.</p>
+</div>
+<div class="pc rv" style="text-align:center">
+  <div class="ptag">Первый визит</div>
+  <div class="pname">Знакомство + Диагностика</div>
+  <div class="pmeta">40-50 минут · м. Маяковская</div>
+  <div class="pline"></div>
+  <div class="pfree">Бесплатно</div>
+  <div class="pfsub">Экспресс-оценка ВСР + пробный сеанс Микро-Лэнар + консультация по результатам</div>
+  <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20записаться%20на%20бесплатную%20диагностику%20ВСР" class="btn" style="width:100%;text-align:center">Записаться бесплатно →</a>
+  <div class="ppr">
+    <div class="ppr-t">Программы после знакомства</div>
+    <div class="prr"><span>Разовый сеанс</span><span>3 000 ₽</span></div>
+    <div class="prr"><span>Курс 5 сеансов</span><span>12 500 ₽</span></div>
+    <div class="prr hl"><span>Курс 10 сеансов</span><span>20 000 ₽</span></div>
+    <div class="prr"><span>Курс 15 сеансов</span><span>27 000 ₽</span></div>
+    <div class="psav">Экономия до 25% при покупке курса</div>
   </div>
-  <div class="p-card rv">
-    <div class="p-tag">Бесплатно · м. Маяковская</div>
-    <div class="p-name">Экспресс-диагностика + пробный сеанс</div>
-    <div class="p-meta">Кабинет Антистресс Лаб · Москва, ЦАО</div>
-    <div class="p-line"></div>
-    <div class="p-free">0 ₽</div>
-    <div class="p-free-sub">Замер ВСР + 20-минутный сеанс + повторный замер<br>Без обязательств. Просто посмотрите на свои цифры.</div>
-    <a href="https://wa.me/7XXXXXXXXXX" class="btn" style="width:100%;display:block;text-align:center">Записаться на бесплатную проверку →</a>
-    <div class="p-prices">
-      <div class="p-prices-title">Стоимость курса (после пробного визита)</div>
-      <div class="p-price-row"><span>Сеанс 30 мин</span><span>3 500 ₽</span></div>
-      <div class="p-price-row"><span>Сеанс 40 мин</span><span>4 500 ₽</span></div>
-      <div class="p-price-row highlight"><span>Абонемент 10 × 40 мин</span><span>29 500 ₽</span></div>
-      <div class="p-savings">Экономия 16 000 ₽ по сравнению с разовыми сеансами</div>
-    </div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTRAINDICATIONS -->
+<section class="section">
+<div class="cn">
+<div class="rv" style="text-align:center">
+  <div class="sl">Важно знать</div>
+  <h2 class="st">Противопоказания</h2>
+  <p class="ss ctr" style="margin-bottom:32px">Микро-Лэнар безопасен для абсолютного большинства людей. Однако есть ряд ограничений:</p>
+</div>
+<div class="g2 rv" style="gap:24px">
+  <div style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:4px">
+    <h4 style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#D4A853;margin-bottom:12px;font-family:Outfit;font-weight:600">Абсолютные</h4>
+    <ul style="list-style:none;font-size:.82rem;color:var(--t3);line-height:2;font-weight:300">
+      <li>• Травмы и воспалительные заболевания ЦНС</li>
+      <li>• Металлические имплантаты в области черепа</li>
+      <li>• Острый инсульт</li>
+      <li>• Острый психоз</li>
+      <li>• Опухоли головного мозга</li>
+      <li>• Кардиостимулятор</li>
+    </ul>
   </div>
+  <div style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:4px">
+    <h4 style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-family:Outfit;font-weight:600">Разрешено</h4>
+    <ul style="list-style:none;font-size:.82rem;color:var(--t3);line-height:2;font-weight:300">
+      <li>• ✓ Дети от 5 лет</li>
+      <li>• ✓ Беременные (под наблюдением)</li>
+      <li>• ✓ Пожилые люди</li>
+      <li>• ✓ Совместно с другими процедурами</li>
+      <li>• ✓ Домашнее использование</li>
+      <li>• ✓ Нет привыкания, нет побочных эффектов</li>
+    </ul>
+  </div>
+</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- FAQ -->
-<section class="section">
-<div class="container">
-  <div class="faq-wrap">
-    <div class="rv" style="text-align:center">
-      <div class="s-label">Вопросы</div>
-      <h2 class="s-title">Частые <span class="accent">вопросы</span></h2>
-    </div>
-    <div style="margin-top:36px">
-      <details class="faq rv"><summary>Это безопасно?</summary><div class="faq-body">Да. Аппарат Микро-Лэнар сертифицирован и разрешён для домашнего использования. Более 40 лет практики. Никаких побочных эффектов. Противопоказания: эпилепсия, кардиостимулятор, беременность.</div></details>
-      <details class="faq rv"><summary>Мне это поможет, если я принимаю снотворное?</summary><div class="faq-body">Сеанс не заменяет назначения врача. Но многие клиенты постепенно снижают дозировку снотворных после курса. Аппарат помогает организму самому вырабатывать мелатонин — вместо синтетического.</div></details>
-      <details class="faq rv"><summary>Сколько сеансов нужно для результата?</summary><div class="faq-body">Эффект заметен уже после первого сеанса (показатели ВСР). Для устойчивого улучшения сна рекомендуем курс из 10 сеансов. Многие замечают значительные изменения после 3–5 сеансов.</div></details>
-      <details class="faq rv"><summary>Это медицинская процедура?</summary><div class="faq-body">Нет, это оздоровительная процедура. Антистресс Лаб — кабинет оздоровления, не медицинский центр. Мы не ставим диагнозы и не назначаем лечение. Мы помогаем снизить уровень стресса.</div></details>
-      <details class="faq rv"><summary>Что взять с собой?</summary><div class="faq-body">Ничего. Просто приходите в удобной одежде. Сеанс проходит в кресле. Можно закрыть глаза и расслабиться.</div></details>
-      <details class="faq rv"><summary>Бесплатный визит — это правда бесплатно?</summary><div class="faq-body">Да, полностью. Замер ВСР + 20-минутный пробный сеанс + повторный замер. Без обязательств. Вы увидите свои цифры и примете решение сами.</div></details>
-    </div>
-  </div>
+<section class="section" style="background:var(--bg2)">
+<div class="cn">
+<div class="rv" style="text-align:center">
+  <div class="sl">Вопросы</div>
+  <h2 class="st">Частые вопросы</h2>
+</div>
+<div style="margin-top:40px" class="rv">
+  <details class="faq"><summary>Это больно? Что я буду чувствовать?</summary><div class="faq-body">Нет, это безболезненно. Электроды крепятся к мочкам ушей — вы чувствуете лёгкое покалывание или тепло. Большинство людей описывают ощущения как приятное расслабление. Многие засыпают во время сеанса.</div></details>
+  <details class="faq"><summary>Чем это отличается от мелатонина/магния/снотворных?</summary><div class="faq-body">Принципиально. Мелатонин и снотворные дают химическое вещество извне. Микро-Лэнар запускает выработку собственных нейромедиаторов организма: β-эндорфинов, серотонина, дофамина. Поэтому нет привыкания, зависимости и побочных эффектов. Организм сам восстанавливает баланс.</div></details>
+  <details class="faq"><summary>Сколько сеансов нужно для результата?</summary><div class="faq-body">Эффект ощущается уже после первого сеанса — это видно на ВСР-диагностике. Для устойчивого результата рекомендуется курс из 10-15 сеансов (через день или каждый день). Улучшение сна большинство отмечают после 3-5 сеансов. Полный курс закрепляет эффект на 3-6 месяцев.</div></details>
+  <details class="faq"><summary>Есть ли научные исследования?</summary><div class="faq-body">Да, более 200 научных публикаций за 40+ лет. Исследования проводились в РНИМУ им. Пирогова, Военно-медицинской академии (СПб), Институте мозга РАН, Центре им. Кулакова и других ведущих институтах. Аппарат имеет регистрационное удостоверение Росздравнадзора, рекомендован Минздравом и Минобороны РФ.</div></details>
+  <details class="faq"><summary>Это не электрошок?</summary><div class="faq-body">Нет. Электрошоковая «процедура» (ЭСТ) использует токи в тысячи раз сильнее и применяется в психиатрии под наркозом. Микро-Лэнар использует сверхмалые импульсы (микроамперы), которые воздействуют мягко и безболезненно. Это как разница между ураганом и лёгким ветерком.</div></details>
+  <details class="faq"><summary>Можно ли совмещать с другими процедурами/таблетками?</summary><div class="faq-body">Да. Микро-Лэнар хорошо сочетается с массажем, йогой, медитацией и другими оздоровительными практиками. Не конфликтует с приёмом витаминов, БАД и большинства препаратов. Если вы принимаете психотропные препараты — обсудите это на консультации.</div></details>
+  <details class="faq"><summary>Как быстро я почувствую эффект на сон?</summary><div class="faq-body">Большинство замечают улучшение засыпания уже после 1-3 сеансов. Ночные пробуждения обычно уменьшаются к 5-7 сеансу. К концу курса (10-15 сеансов) 92% клиентов перестают просыпаться посреди ночи.</div></details>
+  <details class="faq"><summary>Где вы находитесь?</summary><div class="faq-body">Москва, ЦАО, рядом с м. Маяковская (также удобно от м. Белорусская, Краснопресненская, Баррикадная, 1905 года). Точный адрес сообщим при записи.</div></details>
+</div>
 </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-<div class="container rv">
-  <h2>Хватит считать <span class="accent">овец.</span><br>Посчитайте свой стресс.</h2>
-  <p style="max-width:440px;margin:16px auto 32px;font-size:.9rem;color:var(--text3);line-height:1.8;font-weight:300">Бесплатная проверка уровня стресса + пробный сеанс. 30 минут. М. Маяковская.</p>
-  <a href="#booking" class="btn">Записаться бесплатно →</a>
-  <p class="final-ps">Вы увидите свой уровень стресса в цифрах. Это меняет отношение к проблеме.</p>
+<div class="cn">
+  <div class="rv"><div class="sl" style="text-align:center">Начните сегодня</div>
+  <h2>Проверьте свой <em style="color:var(--teal);font-style:italic">уровень стресса</em><br>— бесплатно, за 3 минуты</h2>
+  <p class="ss ctr" style="margin:16px auto 0">Диагностика ВСР + пробный сеанс + консультация. Вы увидите свои цифры, попробуете Микро-Лэнар — и решите, подходит ли это вам.</p></div>
+  <div class="rv rv-d1" style="margin-top:36px">
+    <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20записаться%20на%20бесплатную%20диагностику%20ВСР" class="btn">Записаться бесплатно →</a>
+  </div>
+  <div class="fps rv rv-d2">Москва · м. Маяковская · Без обязательств · Первый визит бесплатный</div>
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<div class="container">
-  <div class="f-brand">✦ Антистресс Лаб</div>
-  <div class="f-links">
-    <a href="#">Москва, ЦАО · м. Маяковская</a>
-    <a href="https://wa.me/7XXXXXXXXXX">WhatsApp</a>
-    <a href="#">Telegram</a>
+<div class="cw">
+  <div class="fb">Антистресс Лаб</div>
+  <div class="fl">
+    <a href="#">Оздоровительные процедуры</a>
+    <a href="#">м. Маяковская, Москва</a>
+    <a href="#">Запись по WhatsApp</a>
   </div>
-  <div class="f-legal">© 2026 Антистресс Лаб. Все права защищены.<br>Оздоровительный кабинет. Не является медицинской услугой.<br>Данная страница носит информационный характер и не является публичной офертой.</div>
+  <div class="fleg">Оздоровительный кабинет. Не является медицинской организацией. Оздоровительные процедуры на аппарате Микро-Лэнар не являются медицинской помощью. Информация на сайте не является медицинской рекомендацией. При наличии заболеваний проконсультируйтесь с врачом. Аппарат Микро-Лэнар имеет регистрационное удостоверение Росздравнадзора.</div>
 </div>
 </footer>
 
 <script>
+// Nav scroll
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+// Reveal on scroll
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Smooth anchor
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 </script>
 </body>
 </html>
