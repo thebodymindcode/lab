@@ -236,6 +236,435 @@ footer{padding:48px 0;border-top:1px solid var(--border);text-align:center}
 
 <div class="divider"></div>
 
+<!-- ═══════════════════════════════════════════ -->
+<!-- WHAT IS ANTISTRESS LAB — BIG CONCEPT BLOCK -->
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- CONCEPT HERO -->
+<section class="dark-s" style="padding:120px 0">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Концепция</div>
+  <h2 style="font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:400;color:#fff;margin-bottom:24px;letter-spacing:-.02em;line-height:1.15">Антистресс Лаб — это <span style="color:var(--tl);font-style:italic">не клиника.</span><br>Это ваша научная лаборатория<br><span style="color:var(--tl);font-style:italic">внутреннего баланса.</span></h2>
+  <p class="ss ctr" style="color:rgba(255,255,255,.6);max-width:600px;font-size:1rem">Место, где стресс перестаёт быть абстрактным «мне плохо» и становится конкретными цифрами. А цифры — поддаются коррекции.</p>
+</div>
+
+<!-- SVG: Concept ecosystem — animated circular diagram -->
+<div style="display:flex;justify-content:center;margin:64px 0 48px">
+<svg width="680" height="420" viewBox="0 0 680 420" fill="none" class="rv" style="max-width:100%">
+  <!-- Central hub -->
+  <circle cx="340" cy="210" r="60" fill="rgba(13,148,136,.12)" stroke="rgba(45,212,191,.3)" stroke-width="2">
+    <animate attributeName="r" values="60;65;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="340" cy="210" r="38" fill="rgba(13,148,136,.2)" stroke="rgba(45,212,191,.4)" stroke-width="1.5">
+    <animate attributeName="r" values="38;42;38" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="340" y="203" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#fff" font-weight="600">Антистресс</text>
+  <text x="340" y="220" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="var(--tl)" font-weight="600">Лаб</text>
+
+  <!-- Orbiting ring -->
+  <circle cx="340" cy="210" r="130" fill="none" stroke="rgba(45,212,191,.08)" stroke-width="1" stroke-dasharray="6 6">
+    <animateTransform attributeName="transform" type="rotate" from="0 340 210" to="360 340 210" dur="60s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="340" cy="210" r="175" fill="none" stroke="rgba(45,212,191,.05)" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <!-- NODE 1: Diagnostics (top) -->
+  <line x1="340" y1="148" x2="340" y2="72" stroke="rgba(45,212,191,.2)" stroke-width="1.5" stroke-dasharray="4 3">
+    <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="340" cy="55" r="28" fill="rgba(13,148,136,.1)" stroke="rgba(45,212,191,.35)" stroke-width="1.5">
+    <animate attributeName="r" values="28;31;28" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- HRV wave inside -->
+  <path d="M322 55 L328 48 L332 60 L336 44 L340 62 L344 46 L348 58 L352 50 L358 55" stroke="var(--tl)" stroke-width="1.5" fill="none"/>
+  <text x="340" y="95" text-anchor="middle" font-family="Outfit" font-size="9" fill="#fff" font-weight="600">Диагностика ВСР</text>
+  <text x="340" y="108" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.45)">объективные данные</text>
+
+  <!-- NODE 2: Procedure (right) -->
+  <line x1="398" y1="190" x2="476" y2="150" stroke="rgba(45,212,191,.2)" stroke-width="1.5" stroke-dasharray="4 3">
+    <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite" begin=".5s"/>
+  </line>
+  <circle cx="500" cy="138" r="28" fill="rgba(13,148,136,.1)" stroke="rgba(45,212,191,.35)" stroke-width="1.5">
+    <animate attributeName="r" values="28;31;28" dur="3s" repeatCount="indefinite" begin=".5s"/>
+  </circle>
+  <!-- Pulse icon inside -->
+  <text x="500" y="142" text-anchor="middle" font-family="Outfit" font-size="16" fill="var(--tl)">~</text>
+  <text x="500" y="178" text-anchor="middle" font-family="Outfit" font-size="9" fill="#fff" font-weight="600">Микро-Лэнар</text>
+  <text x="500" y="191" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.45)">оздоровительная процедура</text>
+
+  <!-- NODE 3: Tracking (bottom-right) -->
+  <line x1="380" y1="256" x2="460" y2="310" stroke="rgba(45,212,191,.2)" stroke-width="1.5" stroke-dasharray="4 3">
+    <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </line>
+  <circle cx="480" cy="326" r="28" fill="rgba(13,148,136,.1)" stroke="rgba(45,212,191,.35)" stroke-width="1.5">
+    <animate attributeName="r" values="28;31;28" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <!-- Chart icon inside -->
+  <rect x="468" y="318" width="5" height="14" rx="1" fill="var(--tl)" opacity=".5"/>
+  <rect x="476" y="312" width="5" height="20" rx="1" fill="var(--tl)" opacity=".7"/>
+  <rect x="484" y="322" width="5" height="10" rx="1" fill="var(--tl)" opacity=".5"/>
+  <rect x="492" y="308" width="5" height="24" rx="1" fill="var(--tl)" opacity=".9"/>
+  <text x="480" y="366" text-anchor="middle" font-family="Outfit" font-size="9" fill="#fff" font-weight="600">Трекинг прогресса</text>
+  <text x="480" y="379" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.45)">замер каждый визит</text>
+
+  <!-- NODE 4: Knowledge (bottom-left) -->
+  <line x1="300" y1="256" x2="218" y2="310" stroke="rgba(45,212,191,.2)" stroke-width="1.5" stroke-dasharray="4 3">
+    <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+  </line>
+  <circle cx="200" cy="326" r="28" fill="rgba(13,148,136,.1)" stroke="rgba(45,212,191,.35)" stroke-width="1.5">
+    <animate attributeName="r" values="28;31;28" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  <!-- Brain icon inside -->
+  <ellipse cx="200" cy="322" rx="12" ry="10" stroke="var(--tl)" stroke-width="1.2" fill="none"/>
+  <path d="M194 322 Q200 316 206 322" stroke="var(--tl)" stroke-width="1" fill="none"/>
+  <text x="200" y="366" text-anchor="middle" font-family="Outfit" font-size="9" fill="#fff" font-weight="600">Понимание себя</text>
+  <text x="200" y="379" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.45)">осознание причин стресса</text>
+
+  <!-- NODE 5: Environment (left) -->
+  <line x1="282" y1="190" x2="202" y2="150" stroke="rgba(45,212,191,.2)" stroke-width="1.5" stroke-dasharray="4 3">
+    <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite" begin="2s"/>
+  </line>
+  <circle cx="180" cy="138" r="28" fill="rgba(13,148,136,.1)" stroke="rgba(45,212,191,.35)" stroke-width="1.5">
+    <animate attributeName="r" values="28;31;28" dur="3s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <!-- Leaf/zen icon inside -->
+  <path d="M172 142 Q180 128 188 142" stroke="var(--tl)" stroke-width="1.3" fill="none"/>
+  <line x1="180" y1="132" x2="180" y2="148" stroke="var(--tl)" stroke-width="1" opacity=".6"/>
+  <text x="180" y="178" text-anchor="middle" font-family="Outfit" font-size="9" fill="#fff" font-weight="600">Пространство</text>
+  <text x="180" y="191" text-anchor="middle" font-family="Outfit" font-size="7" fill="rgba(255,255,255,.45)">тишина, приватность, комфорт</text>
+
+  <!-- Connecting arcs between nodes (outer ring) -->
+  <path d="M365 32 Q500 20 520 118" stroke="rgba(45,212,191,.06)" stroke-width="1" fill="none"/>
+  <path d="M525 160 Q560 260 500 340" stroke="rgba(45,212,191,.06)" stroke-width="1" fill="none"/>
+  <path d="M458 350 Q340 400 220 350" stroke="rgba(45,212,191,.06)" stroke-width="1" fill="none"/>
+  <path d="M178 310 Q120 240 160 158" stroke="rgba(45,212,191,.06)" stroke-width="1" fill="none"/>
+  <path d="M180 118 Q200 40 320 32" stroke="rgba(45,212,191,.06)" stroke-width="1" fill="none"/>
+
+  <!-- Glow effect on center -->
+  <circle cx="340" cy="210" r="18" fill="var(--tl)" opacity=".06">
+    <animate attributeName="r" values="18;50;18" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".06;.02;.06" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+</div>
+
+<!-- Three pillars text -->
+<div class="g3 rv" style="margin-top:16px;gap:32px">
+  <div style="text-align:center;padding:0 12px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--tl);line-height:1;margin-bottom:8px">01</div>
+    <h3 style="font-size:1.1rem;color:#fff;margin-bottom:8px">Измеряем, а не гадаем</h3>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.75;font-weight:300">Каждый визит начинается и заканчивается замером ВСР. Вы видите свой прогресс в цифрах — не «мне кажется лучше», а конкретные данные. Индекс стресса, баланс нервной системы, уровень адаптации.</p>
+  </div>
+  <div style="text-align:center;padding:0 12px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--tl);line-height:1;margin-bottom:8px">02</div>
+    <h3 style="font-size:1.1rem;color:#fff;margin-bottom:8px">Запускаем, а не маскируем</h3>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.75;font-weight:300">Микро-Лэнар не глушит симптомы таблетками. Он запускает собственные механизмы восстановления организма: выработку эндорфинов, серотонина, дофамина. Ваш мозг сам учится расслабляться.</p>
+  </div>
+  <div style="text-align:center;padding:0 12px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--tl);line-height:1;margin-bottom:8px">03</div>
+    <h3 style="font-size:1.1rem;color:#fff;margin-bottom:8px">Сопровождаем, а не бросаем</h3>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.75;font-weight:300">Это не разовая процедура. Это программа с контролем результатов на каждом этапе. Мы отслеживаем ваш прогресс и корректируем подход под вашу динамику.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- ANTISTRESS LAB PHILOSOPHY — LIGHT SECTION -->
+<section class="section" style="padding:100px 0">
+<div class="cw">
+<div class="g2">
+  <div class="rv">
+    <div class="sl">Философия</div>
+    <h2 class="st" style="max-width:480px">Почему мы назвали это <span class="accent">«Лабораторией»</span></h2>
+    <div style="font-size:.9rem;color:var(--t2);line-height:1.9;font-weight:300;margin-top:20px">
+      <p style="margin-bottom:14px">Потому что мы <strong style="color:var(--text);font-weight:600">не верим в «волшебные таблетки»</strong>. Стресс — это не абстрактное «всё плохо». Это конкретный дисбаланс нервной системы, который можно увидеть на графике и исправить методично.</p>
+      <p style="margin-bottom:14px"><em style="color:var(--teal)">Лаборатория</em> — потому что здесь мы работаем с данными. Каждый сеанс — это эксперимент с вашей нервной системой, где гипотеза проверяется замером. Вы не просто «ходите на процедуры» — вы понимаете, что происходит внутри вас.</p>
+      <p style="margin-bottom:14px"><em style="color:var(--teal)">Антистресс</em> — потому что мы работаем с корневой причиной, а не симптомами. Плохой сон, тревога, раздражительность, упадок сил — это <strong style="color:var(--text);font-weight:600">следствия</strong>. Причина — перегруженная нервная система. Мы перезагружаем её.</p>
+      <p>Результат не «мне кажется, стало лучше». Результат — <strong style="color:var(--text);font-weight:600">индекс стресса 82% → 34%</strong>. Это видно. Это измеримо. Это работает.</p>
+    </div>
+  </div>
+  <div class="rv rv-d1" style="display:flex;justify-content:center">
+    <!-- SVG: Lab journey / transformation path -->
+    <svg width="380" height="440" viewBox="0 0 380 440" fill="none">
+      <!-- Background subtle grid -->
+      <rect x="0" y="0" width="380" height="440" rx="8" fill="var(--bg2)" stroke="var(--border)" stroke-width="1"/>
+
+      <!-- Title -->
+      <text x="190" y="30" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="var(--text)" font-weight="500" font-style="italic">Ваш путь в Антистресс Лаб</text>
+
+      <!-- STAGE 1: Entry (stressed) -->
+      <rect x="30" y="50" width="320" height="68" rx="6" fill="white" stroke="#D4A853" stroke-width="1" opacity=".7"/>
+      <circle cx="66" cy="84" r="18" fill="rgba(212,168,83,.1)" stroke="#D4A853" stroke-width="1.2">
+        <animate attributeName="r" values="18;20;18" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Stress face -->
+      <circle cx="59" cy="80" r="1.5" fill="#D4A853"/>
+      <circle cx="73" cy="80" r="1.5" fill="#D4A853"/>
+      <path d="M58 90 Q66 86 74 90" stroke="#D4A853" stroke-width="1.2" fill="none"/>
+      <text x="100" y="74" font-family="Outfit" font-size="9" fill="#D4A853" font-weight="700" letter-spacing="1">ВЫ СЕЙЧАС</text>
+      <text x="100" y="88" font-family="Outfit" font-size="8" fill="var(--t3)">Плохой сон · Тревога · Нет сил</text>
+      <text x="100" y="104" font-family="Outfit" font-size="7" fill="var(--t4)">Индекс стресса: </text>
+      <text x="188" y="104" font-family="Outfit" font-size="8" fill="#D4A853" font-weight="700">78-90%</text>
+
+      <!-- Arrow down -->
+      <line x1="190" y1="118" x2="190" y2="142" stroke="var(--teal)" stroke-width="1.5" opacity=".3"/>
+      <polygon points="184,140 190,150 196,140" fill="var(--teal)" opacity=".3"/>
+
+      <!-- STAGE 2: First visit -->
+      <rect x="30" y="152" width="320" height="68" rx="6" fill="white" stroke="var(--tb)" stroke-width="1"/>
+      <circle cx="66" cy="186" r="18" fill="var(--tp)" stroke="var(--teal)" stroke-width="1.2"/>
+      <!-- Diagnostic icon -->
+      <path d="M56 186 L62 180 L66 188 L70 176 L74 186 L78 183" stroke="var(--teal)" stroke-width="1.5" fill="none"/>
+      <text x="100" y="176" font-family="Outfit" font-size="9" fill="var(--teal)" font-weight="700" letter-spacing="1">ПЕРВЫЙ ВИЗИТ</text>
+      <text x="100" y="190" font-family="Outfit" font-size="8" fill="var(--t3)">ВСР-диагностика → Сеанс → Повторный замер</text>
+      <text x="100" y="206" font-family="Outfit" font-size="7" fill="var(--t4)">Видите свои цифры. Чувствуете разницу.</text>
+      <rect x="280" y="168" width="56" height="22" rx="11" fill="var(--teal)"/>
+      <text x="308" y="183" text-anchor="middle" font-family="Outfit" font-size="8" fill="white" font-weight="700">0 ₽</text>
+
+      <!-- Arrow down -->
+      <line x1="190" y1="220" x2="190" y2="244" stroke="var(--teal)" stroke-width="1.5" opacity=".3"/>
+      <polygon points="184,242 190,252 196,242" fill="var(--teal)" opacity=".3"/>
+
+      <!-- STAGE 3: Course -->
+      <rect x="30" y="254" width="320" height="68" rx="6" fill="white" stroke="var(--tb)" stroke-width="1"/>
+      <circle cx="66" cy="288" r="18" fill="var(--tp)" stroke="var(--teal)" stroke-width="1.2"/>
+      <!-- Progress bars -->
+      <rect x="54" y="280" width="24" height="3" rx="1" fill="rgba(13,148,136,.15)"/>
+      <rect x="54" y="280" width="8" height="3" rx="1" fill="var(--teal)" opacity=".5"/>
+      <rect x="54" y="286" width="24" height="3" rx="1" fill="rgba(13,148,136,.15)"/>
+      <rect x="54" y="286" width="14" height="3" rx="1" fill="var(--teal)" opacity=".7"/>
+      <rect x="54" y="292" width="24" height="3" rx="1" fill="rgba(13,148,136,.15)"/>
+      <rect x="54" y="292" width="20" height="3" rx="1" fill="var(--teal)" opacity=".9"/>
+      <text x="100" y="278" font-family="Outfit" font-size="9" fill="var(--teal)" font-weight="700" letter-spacing="1">ПРОГРАММА</text>
+      <text x="100" y="292" font-family="Outfit" font-size="8" fill="var(--t3)">10-15 сеансов · Замер каждый визит</text>
+      <text x="100" y="308" font-family="Outfit" font-size="7" fill="var(--t4)">Прогресс виден на графике: стресс ↓ сон ↑ энергия ↑</text>
+
+      <!-- Arrow down -->
+      <line x1="190" y1="322" x2="190" y2="346" stroke="var(--teal)" stroke-width="1.5" opacity=".3"/>
+      <polygon points="184,344 190,354 196,344" fill="var(--teal)" opacity=".3"/>
+
+      <!-- STAGE 4: Result (balanced) -->
+      <rect x="30" y="356" width="320" height="68" rx="6" fill="white" stroke="var(--teal)" stroke-width="1.5"/>
+      <circle cx="66" cy="390" r="18" fill="rgba(45,212,191,.1)" stroke="var(--tl)" stroke-width="1.5">
+        <animate attributeName="r" values="18;21;18" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Happy face -->
+      <circle cx="59" cy="386" r="1.5" fill="var(--teal)"/>
+      <circle cx="73" cy="386" r="1.5" fill="var(--teal)"/>
+      <path d="M58 394 Q66 400 74 394" stroke="var(--teal)" stroke-width="1.2" fill="none"/>
+      <text x="100" y="380" font-family="Outfit" font-size="9" fill="var(--teal)" font-weight="700" letter-spacing="1">ВЫ ПОСЛЕ</text>
+      <text x="100" y="394" font-family="Outfit" font-size="8" fill="var(--t3)">Глубокий сон · Спокойствие · Энергия</text>
+      <text x="100" y="410" font-family="Outfit" font-size="7" fill="var(--t4)">Индекс стресса: </text>
+      <text x="188" y="410" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="700">25-35%</text>
+
+      <!-- Transformation arrow on the side -->
+      <path d="M16 84 Q6 240 16 390" stroke="var(--teal)" stroke-width="1" fill="none" opacity=".15" stroke-dasharray="4 4"/>
+      <text x="12" y="240" text-anchor="middle" font-family="Cormorant Garamond" font-size="9" fill="var(--teal)" opacity=".4" transform="rotate(-90,12,240)">трансформация</text>
+    </svg>
+  </div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ANTISTRESS LAB vs ALTERNATIVES -->
+<section class="section" style="background:var(--bg2);padding:100px 0">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Сравнение</div>
+  <h2 class="st">Почему именно <span class="accent">Антистресс Лаб?</span></h2>
+  <p class="ss ctr">Вы наверняка уже пробовали что-то. Вот чем наш подход отличается.</p>
+</div>
+
+<!-- SVG: Comparison visual -->
+<div style="display:flex;justify-content:center;margin:48px 0">
+<svg width="700" height="380" viewBox="0 0 700 380" fill="none" class="rv" style="max-width:100%">
+  <!-- Headers -->
+  <text x="175" y="28" text-anchor="middle" font-family="Outfit" font-size="9" fill="var(--t4)" font-weight="600" letter-spacing="2">ОБЫЧНЫЕ СПОСОБЫ</text>
+  <text x="525" y="28" text-anchor="middle" font-family="Outfit" font-size="9" fill="var(--teal)" font-weight="600" letter-spacing="2">АНТИСТРЕСС ЛАБ</text>
+
+  <!-- Divider line -->
+  <line x1="350" y1="15" x2="350" y2="370" stroke="var(--teal)" stroke-width="1" opacity=".15"/>
+  <circle cx="350" cy="15" r="3" fill="var(--teal)" opacity=".3"/>
+
+  <!-- Row 1: Approach -->
+  <rect x="20" y="48" width="310" height="52" rx="4" fill="white" stroke="var(--border)" stroke-width="1"/>
+  <text x="36" y="68" font-family="Outfit" font-size="8" fill="var(--t4)" font-weight="600">ПОДХОД</text>
+  <text x="36" y="86" font-family="Outfit" font-size="9" fill="var(--t3)">Мелатонин, магний, снотворные</text>
+  <text x="298" y="78" text-anchor="end" font-family="Outfit" font-size="8" fill="#D4A853">маскируют симптом →</text>
+
+  <rect x="370" y="48" width="310" height="52" rx="4" fill="white" stroke="var(--tb)" stroke-width="1"/>
+  <text x="386" y="68" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="600">ПОДХОД</text>
+  <text x="386" y="86" font-family="Outfit" font-size="9" fill="var(--t2)" font-weight="500">Запуск собственных нейромедиаторов</text>
+  <text x="648" y="78" text-anchor="end" font-family="Outfit" font-size="8" fill="var(--teal)">← устраняет причину</text>
+
+  <!-- Row 2: Evidence -->
+  <rect x="20" y="110" width="310" height="52" rx="4" fill="white" stroke="var(--border)" stroke-width="1"/>
+  <text x="36" y="130" font-family="Outfit" font-size="8" fill="var(--t4)" font-weight="600">ДОКАЗАТЕЛЬСТВА</text>
+  <text x="36" y="148" font-family="Outfit" font-size="9" fill="var(--t3)">«Мне кажется, стало лучше»</text>
+  <text x="298" y="140" text-anchor="end" font-family="Outfit" font-size="8" fill="#D4A853">субъективно →</text>
+
+  <rect x="370" y="110" width="310" height="52" rx="4" fill="white" stroke="var(--tb)" stroke-width="1"/>
+  <text x="386" y="130" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="600">ДОКАЗАТЕЛЬСТВА</text>
+  <text x="386" y="148" font-family="Outfit" font-size="9" fill="var(--t2)" font-weight="500">ВСР-замер до и после каждого сеанса</text>
+  <text x="648" y="140" text-anchor="end" font-family="Outfit" font-size="8" fill="var(--teal)">← цифры и графики</text>
+
+  <!-- Row 3: Side effects -->
+  <rect x="20" y="172" width="310" height="52" rx="4" fill="white" stroke="var(--border)" stroke-width="1"/>
+  <text x="36" y="192" font-family="Outfit" font-size="8" fill="var(--t4)" font-weight="600">ПОБОЧНЫЕ ЭФФЕКТЫ</text>
+  <text x="36" y="210" font-family="Outfit" font-size="9" fill="var(--t3)">Привыкание, сонливость, зависимость</text>
+  <text x="298" y="200" text-anchor="end" font-family="Outfit" font-size="8" fill="#D4A853">есть →</text>
+
+  <rect x="370" y="172" width="310" height="52" rx="4" fill="white" stroke="var(--tb)" stroke-width="1"/>
+  <text x="386" y="192" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="600">ПОБОЧНЫЕ ЭФФЕКТЫ</text>
+  <text x="386" y="210" font-family="Outfit" font-size="9" fill="var(--t2)" font-weight="500">Ноль за 40+ лет. Без привыкания.</text>
+  <text x="648" y="200" text-anchor="end" font-family="Outfit" font-size="8" fill="var(--teal)">← нет</text>
+
+  <!-- Row 4: Duration -->
+  <rect x="20" y="234" width="310" height="52" rx="4" fill="white" stroke="var(--border)" stroke-width="1"/>
+  <text x="36" y="254" font-family="Outfit" font-size="8" fill="var(--t4)" font-weight="600">ДЛИТЕЛЬНОСТЬ ЭФФЕКТА</text>
+  <text x="36" y="272" font-family="Outfit" font-size="9" fill="var(--t3)">Пока принимаете — работает. Отменили — возврат.</text>
+  <text x="298" y="262" text-anchor="end" font-family="Outfit" font-size="8" fill="#D4A853">временно →</text>
+
+  <rect x="370" y="234" width="310" height="52" rx="4" fill="white" stroke="var(--tb)" stroke-width="1"/>
+  <text x="386" y="254" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="600">ДЛИТЕЛЬНОСТЬ ЭФФЕКТА</text>
+  <text x="386" y="272" font-family="Outfit" font-size="9" fill="var(--t2)" font-weight="500">Курс закрепляет результат на 3-6 месяцев</text>
+  <text x="648" y="262" text-anchor="end" font-family="Outfit" font-size="8" fill="var(--teal)">← устойчиво</text>
+
+  <!-- Row 5: Science -->
+  <rect x="20" y="296" width="310" height="52" rx="4" fill="white" stroke="var(--border)" stroke-width="1"/>
+  <text x="36" y="316" font-family="Outfit" font-size="8" fill="var(--t4)" font-weight="600">НАУЧНАЯ БАЗА</text>
+  <text x="36" y="334" font-family="Outfit" font-size="9" fill="var(--t3)">«Все пьют, значит помогает»</text>
+  <text x="298" y="324" text-anchor="end" font-family="Outfit" font-size="8" fill="#D4A853">маркетинг →</text>
+
+  <rect x="370" y="296" width="310" height="52" rx="4" fill="white" stroke="var(--tb)" stroke-width="1"/>
+  <text x="386" y="316" font-family="Outfit" font-size="8" fill="var(--teal)" font-weight="600">НАУЧНАЯ БАЗА</text>
+  <text x="386" y="334" font-family="Outfit" font-size="9" fill="var(--t2)" font-weight="500">200+ публикаций, рег. Росздравнадзора</text>
+  <text x="648" y="324" text-anchor="end" font-family="Outfit" font-size="8" fill="var(--teal)">← доказано</text>
+
+  <!-- Bottom accent -->
+  <rect x="370" y="360" width="310" height="3" rx="1.5" fill="var(--teal)" opacity=".3"/>
+</svg>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE / ATMOSPHERE -->
+<section class="section">
+<div class="cw">
+<div class="rv" style="text-align:center">
+  <div class="sl">Пространство</div>
+  <h2 class="st">Место, где вы наконец <span class="accent">выдохнете</span></h2>
+</div>
+
+<div class="g2" style="margin-top:48px">
+  <div class="rv">
+    <!-- SVG: Space/atmosphere illustration -->
+    <svg width="380" height="320" viewBox="0 0 380 320" fill="none">
+      <rect x="0" y="0" width="380" height="320" rx="8" fill="var(--bg2)" stroke="var(--border)" stroke-width="1"/>
+
+      <!-- Room outline -->
+      <rect x="40" y="60" width="300" height="200" rx="4" fill="white" opacity=".5"/>
+
+      <!-- Armchair -->
+      <ellipse cx="190" cy="200" rx="50" ry="20" fill="rgba(13,148,136,.05)" stroke="var(--teal)" stroke-width=".8" opacity=".5"/>
+      <path d="M150 195 Q150 140 170 130 Q190 125 210 130 Q230 140 230 195" stroke="var(--teal)" stroke-width="1" fill="rgba(13,148,136,.03)"/>
+      <path d="M140 190 Q140 170 150 165" stroke="var(--teal)" stroke-width=".8" fill="none" opacity=".4"/>
+      <path d="M240 190 Q240 170 230 165" stroke="var(--teal)" stroke-width=".8" fill="none" opacity=".4"/>
+
+      <!-- Person silhouette with electrodes -->
+      <circle cx="190" cy="118" r="12" fill="rgba(13,148,136,.08)" stroke="var(--teal)" stroke-width=".6"/>
+      <!-- Closed eyes (relaxed) -->
+      <path d="M184 116 Q186 118 188 116" stroke="var(--teal)" stroke-width=".6" fill="none"/>
+      <path d="M192 116 Q194 118 196 116" stroke="var(--teal)" stroke-width=".6" fill="none"/>
+      <!-- Smile -->
+      <path d="M186 122 Q190 125 194 122" stroke="var(--teal)" stroke-width=".5" fill="none"/>
+      <!-- Electrode wires -->
+      <circle cx="175" cy="122" r="3" fill="rgba(212,168,83,.3)" stroke="#D4A853" stroke-width=".8">
+        <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="205" cy="122" r="3" fill="rgba(212,168,83,.3)" stroke="#D4A853" stroke-width=".8">
+        <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite" begin=".5s"/>
+      </circle>
+
+      <!-- Ambient elements -->
+      <!-- Plant -->
+      <path d="M300 240 Q302 220 310 215 Q305 210 300 220 Q295 210 290 215 Q298 220 300 240" fill="var(--teal)" opacity=".15"/>
+      <line x1="300" y1="240" x2="300" y2="250" stroke="var(--teal)" stroke-width=".6" opacity=".3"/>
+
+      <!-- Warm lamp glow -->
+      <circle cx="90" cy="90" r="20" fill="#D4A853" opacity=".04">
+        <animate attributeName="r" values="20;25;20" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".04;.06;.04" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <line x1="90" y1="78" x2="90" y2="110" stroke="#D4A853" stroke-width=".6" opacity=".2"/>
+      <ellipse cx="90" cy="78" rx="8" ry="4" fill="#D4A853" opacity=".08"/>
+
+      <!-- Relaxation waves from person -->
+      <circle cx="190" cy="150" r="25" fill="none" stroke="var(--tl)" stroke-width=".5" opacity="0">
+        <animate attributeName="r" values="25;60;90" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".15;.05;0" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="190" cy="150" r="25" fill="none" stroke="var(--tl)" stroke-width=".5" opacity="0">
+        <animate attributeName="r" values="25;60;90" dur="4s" repeatCount="indefinite" begin="2s"/>
+        <animate attributeName="opacity" values=".15;.05;0" dur="4s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+
+      <!-- Monitor/screen with HRV -->
+      <rect x="260" y="100" width="60" height="40" rx="3" fill="white" stroke="var(--teal)" stroke-width=".6" opacity=".5"/>
+      <path d="M268 120 L274 112 L278 124 L282 108 L286 122 L290 114 L294 120 L300 118 L306 120 L312 116" stroke="var(--teal)" stroke-width="1" fill="none" opacity=".6"/>
+      <text x="290" y="148" text-anchor="middle" font-family="Outfit" font-size="6" fill="var(--t4)">ваши данные</text>
+
+      <!-- Labels -->
+      <text x="190" y="40" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="var(--text)" font-weight="500" font-style="italic">Ваш сеанс в Антистресс Лаб</text>
+      <text x="190" y="285" text-anchor="middle" font-family="Outfit" font-size="8" fill="var(--t4)">тишина · мягкий свет · никуда не торопимся</text>
+      <text x="190" y="300" text-anchor="middle" font-family="Outfit" font-size="7" fill="var(--teal)" opacity=".6">30 минут полной перезагрузки</text>
+    </svg>
+  </div>
+  <div class="rv rv-d1">
+    <h3 style="font-size:1.4rem;color:var(--text);margin-bottom:20px">Это не больница.<br><span class="accent">Это пространство тишины.</span></h3>
+    <div style="font-size:.88rem;color:var(--t2);line-height:1.9;font-weight:300">
+      <p style="margin-bottom:14px"><strong style="color:var(--text);font-weight:600">Приватный кабинет</strong> в самом центре Москвы. 5 минут от м. Маяковская. Никаких очередей, белых халатов и запаха «поликлиники».</p>
+      <p style="margin-bottom:14px"><strong style="color:var(--text);font-weight:600">Удобное кресло, мягкий свет, тишина.</strong> Вы приходите, садитесь, закрываете глаза. Электроды на мочках ушей — вы даже не замечаете их. 30 минут — и вы как после глубокого сна.</p>
+      <p style="margin-bottom:14px"><strong style="color:var(--text);font-weight:600">Экран с вашими данными.</strong> До и после каждого сеанса — вы видите, как меняются ваши показатели. Это не «доверьтесь мне» — это «посмотрите сами».</p>
+      <p><strong style="color:var(--text);font-weight:600">Без спешки.</strong> Мы не принимаем по 20 человек в день. Каждый визит — это 40-50 минут полностью для вас. Диагностика, сеанс, обсуждение, вопросы.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom highlight cards -->
+<div class="g4 rv" style="margin-top:48px">
+  <div class="sc" style="text-align:center;padding:28px 16px">
+    <div style="font-size:1.8rem;margin-bottom:8px">📍</div>
+    <h3 style="font-size:.95rem;margin-bottom:4px">5 мин от метро</h3>
+    <p style="font-size:.76rem">м. Маяковская, ЦАО. Также удобно: Белорусская, Баррикадная</p>
+  </div>
+  <div class="sc" style="text-align:center;padding:28px 16px">
+    <div style="font-size:1.8rem;margin-bottom:8px">🤫</div>
+    <h3 style="font-size:.95rem;margin-bottom:4px">Полная приватность</h3>
+    <p style="font-size:.76rem">Индивидуальный приём. Никаких очередей и чужих людей</p>
+  </div>
+  <div class="sc" style="text-align:center;padding:28px 16px">
+    <div style="font-size:1.8rem;margin-bottom:8px">📊</div>
+    <h3 style="font-size:.95rem;margin-bottom:4px">Данные, не слова</h3>
+    <p style="font-size:.76rem">ВСР-замер каждый визит. Вы видите свой прогресс в цифрах</p>
+  </div>
+  <div class="sc" style="text-align:center;padding:28px 16px">
+    <div style="font-size:1.8rem;margin-bottom:8px">🎯</div>
+    <h3 style="font-size:.95rem;margin-bottom:4px">Первый визит — 0 ₽</h3>
+    <p style="font-size:.76rem">Диагностика + сеанс + консультация. Бесплатно, без обязательств</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<div class="divider"></div>
+
 <!-- WHAT IS MICRO-LENAR — DEEP DIVE -->
 <section class="dark-s">
 <div class="cw">
