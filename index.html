@@ -170,7 +170,6 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   .g4{grid-template-columns:1fr 1fr}
   .comp-grid{grid-template-columns:1fr}
   .nav-inner{padding:0 20px}
-  .hero-orb{width:80px!important;height:80px!important}
 }
 @media(max-width:600px){
   .section{padding:68px 0}
@@ -179,7 +178,6 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   .hero h1{font-size:clamp(2.8rem,14vw,4rem)!important}
   .hero-subtitle{font-size:1.15rem!important;max-width:90%!important}
   .hero-badge{font-size:.72rem!important;padding:6px 14px!important}
-  .hero-orb{width:100px!important;height:100px!important;margin-bottom:32px!important}
   .hero [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important;max-width:100%!important;gap:10px!important}
   .hero [style*="grid-template-columns:repeat(4"] > div{padding:20px 12px!important}
   .hero [style*="font-size:2.6rem"]{font-size:1.8rem!important}
@@ -266,43 +264,6 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   <div class="hero-badge rv"><div class="bdot"></div>Москва · м.&nbsp;Краснопресненская · Первый визит бесплатно</div>
   <h1 class="rv">Плохо <span class="accent">спите?</span></h1>
   <p class="rv hero-subtitle" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.5vw,1.85rem);color:rgba(255,255,255,.9);font-style:italic;max-width:700px;margin:0 auto 40px;line-height:1.5">Проверим уровень стресса за&nbsp;3&nbsp;минуты&nbsp;— и&nbsp;покажем, почему вы&nbsp;не&nbsp;высыпаетесь</p>
-
-  <!-- Animated glowing orb -->
-  <div class="rv hero-orb" style="margin:0 auto 40px;width:120px;height:120px;position:relative">
-    <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%">
-      <defs>
-        <radialGradient id="orb1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5EEAD4" stop-opacity=".35"/><stop offset="50%" stop-color="#0D9488" stop-opacity=".15"/><stop offset="100%" stop-color="#0D9488" stop-opacity="0"/></radialGradient>
-        <radialGradient id="orb2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#D4A853" stop-opacity=".2"/><stop offset="100%" stop-color="#D4A853" stop-opacity="0"/></radialGradient>
-      </defs>
-      <!-- Outer glow pulse -->
-      <circle cx="60" cy="60" r="50" fill="url(#orb1)">
-        <animate attributeName="r" values="45;58;45" dur="4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values=".8;1;.8" dur="4s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Inner bright core -->
-      <circle cx="60" cy="60" r="18" fill="#5EEAD4" opacity=".12">
-        <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values=".12;.2;.12" dur="3s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Gold accent ring -->
-      <circle cx="60" cy="60" r="32" fill="none" stroke="#D4A853" stroke-width=".5" opacity=".25">
-        <animate attributeName="r" values="30;38;30" dur="5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values=".25;.1;.25" dur="5s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Tiny orbiting dot -->
-      <circle cx="60" cy="28" r="2" fill="#5EEAD4" opacity=".6">
-        <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="8s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Second orbiting dot -->
-      <circle cx="90" cy="60" r="1.5" fill="#D4A853" opacity=".4">
-        <animateTransform attributeName="transform" type="rotate" from="180 60 60" to="540 60 60" dur="12s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Center dot -->
-      <circle cx="60" cy="60" r="3" fill="#5EEAD4" opacity=".5">
-        <animate attributeName="opacity" values=".5;.8;.5" dur="2s" repeatCount="indefinite"/>
-      </circle>
-    </svg>
-  </div>
   <p class="rv" style="font-size:clamp(1rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:620px;margin:0 auto 48px;line-height:1.85">Бесплатная диагностика по&nbsp;вариабельности сердечного ритма&nbsp;+ пробный сеанс на&nbsp;аппарате Микро-Лэнар. Разницу увидите в&nbsp;цифрах&nbsp;— научные данные, не&nbsp;ощущения.</p>
   <div class="rv" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:72px">
     <a href="#booking" class="btn" style="font-size:1.05rem;padding:18px 44px;background:#5EEAD4;color:#080E1A">Записаться бесплатно →</a>
