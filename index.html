@@ -58,6 +58,8 @@ nav.scrolled .logo{color:var(--text)}
 @keyframes zzz1{0%{opacity:0;transform:translate(0,0)}30%{opacity:.5}100%{opacity:0;transform:translate(20px,-50px)}}
 @keyframes zzz2{0%{opacity:0;transform:translate(0,0)}30%{opacity:.4}100%{opacity:0;transform:translate(25px,-55px)}}
 @keyframes zzz3{0%{opacity:0;transform:translate(0,0)}30%{opacity:.35}100%{opacity:0;transform:translate(30px,-60px)}}
+@keyframes moonFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes moonGlow{0%,100%{box-shadow:inset -16px -3px 0 0 #D4A853,0 0 30px rgba(212,168,83,.1),0 0 60px rgba(212,168,83,.05)}50%{box-shadow:inset -16px -3px 0 0 #D4A853,0 0 40px rgba(212,168,83,.15),0 0 80px rgba(212,168,83,.08)}}
 
 /* Stats row */
 
@@ -183,6 +185,8 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   .hero .cw{padding:100px 24px 0!important}
   .hero h1{font-size:clamp(2.8rem,14vw,4rem)!important}
   .hero-subtitle{font-size:1.15rem!important;max-width:90%!important}
+  .hero [style*="top:8%;right:12%"]{width:36px!important;height:36px!important;top:6%!important;right:8%!important}
+  .hero [style*="top:8%;right:12%"] > div{width:36px!important;height:36px!important;box-shadow:inset -10px -2px 0 0 #D4A853,0 0 20px rgba(212,168,83,.1)!important}
   .hero-badge{font-size:.72rem!important;padding:6px 14px!important}
   .hero [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important;max-width:100%!important;gap:10px!important}
   .hero [style*="grid-template-columns:repeat(4"] > div{padding:20px 12px!important}
@@ -234,6 +238,10 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   <div style="position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;top:20%;right:10%;animation:twk 2.6s infinite 2.5s"></div>
   <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;bottom:30%;left:12%;animation:twk 4s infinite 3s"></div>
   <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#D4A853;bottom:25%;right:15%;animation:twk 3.8s infinite 1.2s"></div>
+  <!-- Crescent Moon — subtle -->
+  <div style="position:absolute;top:8%;right:12%;width:60px;height:60px;opacity:.3;animation:moonFloat 8s ease-in-out infinite">
+    <div style="width:60px;height:60px;border-radius:50%;box-shadow:inset -16px -3px 0 0 #D4A853,0 0 30px rgba(212,168,83,.1),0 0 60px rgba(212,168,83,.05);animation:moonGlow 4s ease-in-out infinite"></div>
+  </div>
   <!-- Zzz -->
   <div style="position:absolute;right:12%;top:30%;font-family:'Cormorant Garamond',serif;font-style:italic;color:#D4A853;font-size:1.4rem;animation:zzz1 5s infinite;opacity:0">z</div>
   <div style="position:absolute;right:10%;top:24%;font-family:'Cormorant Garamond',serif;font-style:italic;color:#D4A853;font-size:1.8rem;animation:zzz2 6s infinite 1.5s;opacity:0">z</div>
@@ -246,7 +254,7 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   <p class="rv hero-subtitle" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.5vw,1.85rem);color:rgba(255,255,255,.9);font-style:italic;max-width:700px;margin:0 auto 36px;line-height:1.55">Проверим уровень стресса за&nbsp;3&nbsp;минуты&nbsp;— и&nbsp;покажем, почему&nbsp;вы&nbsp;не&nbsp;высыпаетесь</p>
   <p class="rv" style="font-size:clamp(1rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:620px;margin:0 auto 48px;line-height:1.85">Бесплатная диагностика по&nbsp;вариабельности сердечного ритма + пробный сеанс на&nbsp;аппарате Микро&#8209;Лэнар. Разницу увидите в&nbsp;цифрах&nbsp;— научные&nbsp;данные, не&nbsp;ощущения.</p>
   <div class="rv" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:72px">
-    <a href="#booking" class="btn" style="font-size:1.05rem;padding:18px 44px;background:#5EEAD4;color:#0A2420">Записаться бесплатно →</a>
+    <a href="#booking" class="btn" style="font-size:1.05rem;padding:18px 44px;background:#0D9488;color:#fff;font-weight:600">Записаться бесплатно →</a>
     <a href="#how" style="display:inline-flex;align-items:center;justify-content:center;padding:18px 44px;border-radius:6px;text-decoration:none;font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.15);background:none;transition:all .3s">Как это работает</a>
   </div>
   <div class="rv" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:820px;margin:0 auto;padding-bottom:60px">
