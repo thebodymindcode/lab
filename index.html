@@ -41,17 +41,23 @@ nav.scrolled .logo{color:var(--text)}
 .nav-cta:hover{background:#0B7F74;transform:translateY(-1px)}
 
 /* Hero */
-.hero{padding:0;text-align:center;position:relative;overflow:hidden;background:#080E1A;min-height:100vh;display:flex;align-items:center}
+.hero{padding:0;text-align:center;position:relative;overflow:hidden;background:linear-gradient(170deg,#071E1A 0%,#0A2A24 35%,#0C3028 65%,#081E1A 100%);min-height:100vh;display:flex;align-items:center}
 .hero h1{color:#fff;font-size:clamp(3.4rem,9vw,6.8rem);letter-spacing:-.04em;margin-bottom:32px;line-height:1.05}
 .hero .accent{color:#5EEAD4;font-style:italic}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(94,234,212,.08);border:1px solid rgba(94,234,212,.2);border-radius:99px;padding:8px 20px;font-size:.82rem;color:#5EEAD4;font-weight:500;margin-bottom:28px;animation:heroBadgeFade .6s ease .2s both}
 .hero-badge .bdot{width:6px;height:6px;border-radius:50%;background:#5EEAD4;animation:starPulse 2s infinite}
 
-/* Hero sleep animation */
-.hero-net{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
-.hero-net svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;max-width:1200px;height:100%;opacity:1}
+/* Hero animation — no SVG */
 @keyframes heroBadgeFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes starPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+@keyframes aur1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(15%,8%) scale(1.15)}}
+@keyframes aur2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-12%,10%) scale(1.2)}}
+@keyframes aur3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10%,-5%) scale(1.1)}}
+@keyframes aur4{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,12%) scale(1.2)}}
+@keyframes twk{0%,100%{opacity:.15}50%{opacity:.9}}
+@keyframes zzz1{0%{opacity:0;transform:translate(0,0)}30%{opacity:.5}100%{opacity:0;transform:translate(20px,-50px)}}
+@keyframes zzz2{0%{opacity:0;transform:translate(0,0)}30%{opacity:.4}100%{opacity:0;transform:translate(25px,-55px)}}
+@keyframes zzz3{0%{opacity:0;transform:translate(0,0)}30%{opacity:.35}100%{opacity:0;transform:translate(30px,-60px)}}
 
 /* Stats row */
 
@@ -184,7 +190,6 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
   .hero [style*="font-size:2.4rem"]{font-size:1.8rem!important}
   .hero .btn,.hero a[href="#how"]{width:100%!important;text-align:center!important;justify-content:center!important}
   .hero [style*="margin-bottom:72px"]{margin-bottom:40px!important}
-  .hero-net svg{opacity:.6!important}
   .g4{grid-template-columns:1fr}
   .g3,.inst-grid{grid-template-columns:1fr}
   .cw{padding:0 20px}
@@ -210,63 +215,38 @@ footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--t4)}
 
 <!-- HERO -->
 <section class="hero">
-<!-- AURORA ANIMATION -->
-<div class="hero-net">
-<svg viewBox="0 0 1200 800" fill="none" preserveAspectRatio="xMidYMid slice" style="opacity:.8">
-  <defs>
-    <filter id="aur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="45"/></filter>
-    <filter id="aur2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="65"/></filter>
-    <linearGradient id="ag1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#5EEAD4"/></linearGradient>
-    <linearGradient id="ag2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D4A853"/><stop offset="100%" stop-color="#0D9488"/></linearGradient>
-    <radialGradient id="ag3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5EEAD4" stop-opacity=".4"/><stop offset="100%" stop-color="#0D9488" stop-opacity="0"/></radialGradient>
-  </defs>
-  <!-- Aurora blobs -->
-  <ellipse cx="300" cy="200" rx="250" ry="120" fill="url(#ag1)" filter="url(#aur)" opacity=".1">
-    <animate attributeName="cx" values="300;500;300" dur="20s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="200;280;200" dur="14s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="250;320;250" dur="18s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".1;.16;.1" dur="16s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="800" cy="350" rx="200" ry="100" fill="url(#ag2)" filter="url(#aur)" opacity=".08">
-    <animate attributeName="cx" values="800;650;800" dur="22s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="350;250;350" dur="18s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="200;280;200" dur="20s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".08;.14;.08" dur="14s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="600" cy="500" rx="300" ry="80" fill="url(#ag3)" filter="url(#aur2)" opacity=".06">
-    <animate attributeName="cx" values="600;400;600" dur="24s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="500;420;500" dur="16s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="300;380;300" dur="22s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".06;.12;.06" dur="18s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="900" cy="150" rx="120" ry="60" fill="#D4A853" filter="url(#aur)" opacity=".05">
-    <animate attributeName="cx" values="900;750;900" dur="26s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="150;200;150" dur="20s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".05;.09;.05" dur="22s" repeatCount="indefinite"/>
-  </ellipse>
+<!-- AURORA ANIMATION — CSS-based, no SVG overflow -->
+<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+  <!-- Aurora blob 1 — teal -->
+  <div style="position:absolute;width:600px;height:400px;top:-5%;left:10%;background:radial-gradient(ellipse,rgba(45,212,191,.15) 0%,transparent 70%);border-radius:50%;filter:blur(60px);animation:aur1 18s ease-in-out infinite"></div>
+  <!-- Aurora blob 2 — gold -->
+  <div style="position:absolute;width:500px;height:300px;top:10%;right:5%;background:radial-gradient(ellipse,rgba(212,168,83,.12) 0%,transparent 70%);border-radius:50%;filter:blur(50px);animation:aur2 22s ease-in-out infinite"></div>
+  <!-- Aurora blob 3 — bright teal bottom -->
+  <div style="position:absolute;width:700px;height:350px;bottom:-10%;left:20%;background:radial-gradient(ellipse,rgba(94,234,212,.1) 0%,transparent 70%);border-radius:50%;filter:blur(70px);animation:aur3 20s ease-in-out infinite"></div>
+  <!-- Aurora blob 4 — deep green -->
+  <div style="position:absolute;width:400px;height:400px;top:30%;left:-5%;background:radial-gradient(ellipse,rgba(13,148,136,.18) 0%,transparent 70%);border-radius:50%;filter:blur(55px);animation:aur4 25s ease-in-out infinite"></div>
   <!-- Stars -->
-  <circle cx="120" cy="90" r="1.3" fill="#fff"><animate attributeName="opacity" values=".2;.9;.2" dur="3s" repeatCount="indefinite"/></circle>
-  <circle cx="380" cy="60" r="1" fill="#D4A853"><animate attributeName="opacity" values=".15;.8;.15" dur="2.5s" repeatCount="indefinite" begin=".5s"/></circle>
-  <circle cx="650" cy="45" r="1.2" fill="#fff"><animate attributeName="opacity" values=".1;.85;.1" dur="3.2s" repeatCount="indefinite" begin="1s"/></circle>
-  <circle cx="950" cy="70" r="1.1" fill="#fff"><animate attributeName="opacity" values=".2;.9;.2" dur="2.8s" repeatCount="indefinite" begin="1.5s"/></circle>
-  <circle cx="1100" cy="120" r=".9" fill="#D4A853"><animate attributeName="opacity" values=".1;.7;.1" dur="3.8s" repeatCount="indefinite" begin="2s"/></circle>
-  <circle cx="200" cy="350" r=".8" fill="#fff"><animate attributeName="opacity" values=".1;.6;.1" dur="4s" repeatCount="indefinite" begin="2.5s"/></circle>
-  <circle cx="1050" cy="300" r="1" fill="#fff"><animate attributeName="opacity" values=".15;.7;.15" dur="3.4s" repeatCount="indefinite" begin="3s"/></circle>
-  <circle cx="80" cy="550" r=".7" fill="#D4A853"><animate attributeName="opacity" values=".08;.5;.08" dur="3.6s" repeatCount="indefinite" begin="3.5s"/></circle>
+  <div style="position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;top:12%;left:15%;animation:twk 3s infinite"></div>
+  <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#D4A853;top:8%;left:40%;animation:twk 2.5s infinite .5s"></div>
+  <div style="position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;top:6%;right:20%;animation:twk 3.2s infinite 1s"></div>
+  <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;top:15%;right:35%;animation:twk 2.8s infinite 1.5s"></div>
+  <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#D4A853;top:25%;left:8%;animation:twk 3.5s infinite 2s"></div>
+  <div style="position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;top:20%;right:10%;animation:twk 2.6s infinite 2.5s"></div>
+  <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;bottom:30%;left:12%;animation:twk 4s infinite 3s"></div>
+  <div style="position:absolute;width:2px;height:2px;border-radius:50%;background:#D4A853;bottom:25%;right:15%;animation:twk 3.8s infinite 1.2s"></div>
   <!-- Zzz -->
-  <text font-family="Cormorant Garamond" font-size="22" fill="#D4A853" font-style="italic" x="920" y="280"><animate attributeName="y" values="280;200" dur="5s" repeatCount="indefinite"/><animate attributeName="x" values="920;950" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.5;0" dur="5s" repeatCount="indefinite"/>z</text>
-  <text font-family="Cormorant Garamond" font-size="30" fill="#D4A853" font-style="italic" x="945" y="240"><animate attributeName="y" values="240;140" dur="6s" repeatCount="indefinite" begin="1.5s"/><animate attributeName="x" values="945;985" dur="6s" repeatCount="indefinite" begin="1.5s"/><animate attributeName="opacity" values="0;.4;0" dur="6s" repeatCount="indefinite" begin="1.5s"/>z</text>
-  <text font-family="Cormorant Garamond" font-size="40" fill="#D4A853" font-style="italic" x="970" y="190"><animate attributeName="y" values="190;70" dur="7s" repeatCount="indefinite" begin="3s"/><animate attributeName="x" values="970;1020" dur="7s" repeatCount="indefinite" begin="3s"/><animate attributeName="opacity" values="0;.35;0" dur="7s" repeatCount="indefinite" begin="3s"/>z</text>
-</svg>
+  <div style="position:absolute;right:12%;top:30%;font-family:'Cormorant Garamond',serif;font-style:italic;color:#D4A853;font-size:1.4rem;animation:zzz1 5s infinite;opacity:0">z</div>
+  <div style="position:absolute;right:10%;top:24%;font-family:'Cormorant Garamond',serif;font-style:italic;color:#D4A853;font-size:1.8rem;animation:zzz2 6s infinite 1.5s;opacity:0">z</div>
+  <div style="position:absolute;right:8%;top:18%;font-family:'Cormorant Garamond',serif;font-style:italic;color:#D4A853;font-size:2.2rem;animation:zzz3 7s infinite 3s;opacity:0">z</div>
 </div>
 
-<div class="cw" style="position:relative;z-index:1;padding:160px 28px 0">
+<div class="cw" style="position:relative;z-index:1;padding:155px 28px 0">
   <div class="hero-badge rv"><div class="bdot"></div>Москва · м.&nbsp;Краснопресненская · Первый визит бесплатно</div>
   <h1 class="rv">Плохо <span class="accent">спите?</span></h1>
-  <p class="rv hero-subtitle" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.5vw,1.85rem);color:rgba(255,255,255,.9);font-style:italic;max-width:700px;margin:0 auto 40px;line-height:1.5">Проверим уровень стресса за&nbsp;3&nbsp;минуты&nbsp;— и&nbsp;покажем, почему вы&nbsp;не&nbsp;высыпаетесь</p>
-  <p class="rv" style="font-size:clamp(1rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:620px;margin:0 auto 48px;line-height:1.85">Бесплатная диагностика по&nbsp;вариабельности сердечного ритма&nbsp;+ пробный сеанс на&nbsp;аппарате Микро-Лэнар. Разницу увидите в&nbsp;цифрах&nbsp;— научные данные, не&nbsp;ощущения.</p>
+  <p class="rv hero-subtitle" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.5vw,1.85rem);color:rgba(255,255,255,.9);font-style:italic;max-width:700px;margin:0 auto 36px;line-height:1.55">Проверим уровень стресса за&nbsp;3&nbsp;минуты&nbsp;— и&nbsp;покажем, почему&nbsp;вы&nbsp;не&nbsp;высыпаетесь</p>
+  <p class="rv" style="font-size:clamp(1rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:620px;margin:0 auto 48px;line-height:1.85">Бесплатная диагностика по&nbsp;вариабельности сердечного ритма + пробный сеанс на&nbsp;аппарате Микро&#8209;Лэнар. Разницу увидите в&nbsp;цифрах&nbsp;— научные&nbsp;данные, не&nbsp;ощущения.</p>
   <div class="rv" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:72px">
-    <a href="#booking" class="btn" style="font-size:1.05rem;padding:18px 44px;background:#5EEAD4;color:#080E1A">Записаться бесплатно →</a>
+    <a href="#booking" class="btn" style="font-size:1.05rem;padding:18px 44px;background:#5EEAD4;color:#0A2420">Записаться бесплатно →</a>
     <a href="#how" style="display:inline-flex;align-items:center;justify-content:center;padding:18px 44px;border-radius:6px;text-decoration:none;font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.15);background:none;transition:all .3s">Как это работает</a>
   </div>
   <div class="rv" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:820px;margin:0 auto;padding-bottom:60px">
